@@ -30,7 +30,7 @@ OBJS_OS_FORMAT += \
 # Each subdirectory must supply rules for building sources it contributes
 Sources/Drivers/I2C/I2C.o: ../Sources/Drivers/I2C/I2C.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #10 $<'
+	@echo 'Executing target #11 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/Drivers/I2C/I2C.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/Drivers/I2C/I2C.o"
 	@echo 'Finished building: $<'

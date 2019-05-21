@@ -47,6 +47,8 @@
 #include <math.h>
 #include <stdio.h>
 
+#include "wrappers.h"
+
 #include "MKL46Z4.h"
 
 #include "Drivers/I2C/I2C.h"
@@ -59,10 +61,10 @@
 // http://bit.do/KL46z-lcd
 #include "Drivers/LCD/LCD.h"
 
-static volatile int i = 0;
-static portTASK_FUNCTION(Task1, pvParameters){
+//static volatile int i = 0;
+static portTASK_FUNCTION(IMU_get_values, pvParameters){
 	(void) pvParameters;
-	char buffer[50];
+	char buffer[4];
 	for(;;){
 		LED1_Neg();
 		
@@ -71,9 +73,11 @@ static portTASK_FUNCTION(Task1, pvParameters){
 		//buffer[5]='\0';
 		//sprintf(buffer,"-- MagX: %d -- MagY: %d -- MagZ: %d", Raw_Data.mx, Raw_Data.my, Raw_Data.mz);
 		//UART0_send_string_ln(Raw_Data.mx);
-		char buffer[4];
-		sprintf(buffer, "%04i", i);
-		i = (i+1) % 10000;
+
+		GY85_read_RTOS();
+		
+		sprintf(buffer, "%04i", Raw_Data.mx);
+		//i = (i+1) % 10000;
 		vfnLCD_Write_Msg((uint8 *)buffer);
 		FRTOS1_vTaskDelay(100/portTICK_RATE_MS);
 	}
@@ -112,6 +116,8 @@ int main(void)
   /* For example: for(;;) { } */
 	UART0_init();
 	I2C1_init();
+	GY85_mag_init();
+	GY85_acc_init();
 	char buffer[4];
 	sprintf(buffer, "%04i", 1234);
 	vfnLCD_Write_Msg((uint8 *)buffer);
@@ -119,7 +125,7 @@ int main(void)
 		//GY85_test();
 	//LSM9DS1_mag_read();
 	//for(;;) HMC();
-  (void) FRTOS1_xTaskCreate(Task1, (portCHAR *)"Task1", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, NULL);
+  (void) FRTOS1_xTaskCreate(IMU_get_values, (portCHAR *)"IMU_get_values", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, NULL);
   
 
   /*** Don't write any code pass this line, or it will be deleted during code generation. ***/

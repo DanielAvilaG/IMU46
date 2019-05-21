@@ -80,10 +80,11 @@ Sources/main.o: ../Sources/main.c \
  D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdarg.h \
  D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdarg \
  D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/arm/stdarg.ARM.h \
- ../Sources/MKL46Z4.h ../Sources/Drivers/I2C/I2C.h \
- ../Sources/Drivers/I2C/../../MKL46Z4.h ../Sources/Drivers/UART/UART.h \
- ../Sources/Drivers/UART/../../MKL46Z4.h ../Sources/Drivers/GY85/GY85.h \
- ../Sources/Drivers/GY85/../I2C/I2C.h ../Sources/Drivers/LCD/LCD.h \
+ ../Sources/wrappers.h ../Sources/Drivers/GY85/GY85.h \
+ ../Sources/Drivers/GY85/../I2C/I2C.h \
+ ../Sources/Drivers/GY85/../I2C/../../MKL46Z4.h ../Sources/MKL46Z4.h \
+ ../Sources/Drivers/I2C/I2C.h ../Sources/Drivers/UART/UART.h \
+ ../Sources/Drivers/UART/../../MKL46Z4.h ../Sources/Drivers/LCD/LCD.h \
  ../Sources/Drivers/LCD/LCDConfig.h ../Sources/Drivers/LCD/FRDM-s401.h
 
 D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/lib_ewl.prefix:
@@ -248,19 +249,21 @@ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdarg:
 
 D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/arm/stdarg.ARM.h:
 
-../Sources/MKL46Z4.h:
-
-../Sources/Drivers/I2C/I2C.h:
-
-../Sources/Drivers/I2C/../../MKL46Z4.h:
-
-../Sources/Drivers/UART/UART.h:
-
-../Sources/Drivers/UART/../../MKL46Z4.h:
+../Sources/wrappers.h:
 
 ../Sources/Drivers/GY85/GY85.h:
 
 ../Sources/Drivers/GY85/../I2C/I2C.h:
+
+../Sources/Drivers/GY85/../I2C/../../MKL46Z4.h:
+
+../Sources/MKL46Z4.h:
+
+../Sources/Drivers/I2C/I2C.h:
+
+../Sources/Drivers/UART/UART.h:
+
+../Sources/Drivers/UART/../../MKL46Z4.h:
 
 ../Sources/Drivers/LCD/LCD.h:
 

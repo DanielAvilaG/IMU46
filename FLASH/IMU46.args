@@ -37,6 +37,7 @@
 "./Sources/Drivers/LED/LED_25.o"
 "./Sources/Drivers/LSM9DS1/LSM9DS1.o"
 "./Sources/Drivers/UART/UART.o"
+"./Sources/wrappers.o"
 "./Sources/sa_mtb.o"
 "./Sources/main.o"
 "./Sources/Events.o"
