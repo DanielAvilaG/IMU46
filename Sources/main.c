@@ -59,6 +59,7 @@
 // http://bit.do/KL46z-lcd
 #include "Drivers/LCD/LCD.h"
 
+static volatile int i = 0;
 static portTASK_FUNCTION(Task1, pvParameters){
 	(void) pvParameters;
 	char buffer[50];
@@ -70,8 +71,10 @@ static portTASK_FUNCTION(Task1, pvParameters){
 		//buffer[5]='\0';
 		//sprintf(buffer,"-- MagX: %d -- MagY: %d -- MagZ: %d", Raw_Data.mx, Raw_Data.my, Raw_Data.mz);
 		//UART0_send_string_ln(Raw_Data.mx);
-		
-		
+		char buffer[4];
+		sprintf(buffer, "%04i", i);
+		i = (i+1) % 10000;
+		vfnLCD_Write_Msg((uint8 *)buffer);
 		FRTOS1_vTaskDelay(100/portTICK_RATE_MS);
 	}
 }

@@ -793,5 +793,120 @@ PE_DEBUGHALT();
       <EmptySection_DummyValue />
     </Events>
   </Bean>
+  <Bean name="SegLCD1" type="SegLCD_LDD">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="SegLCD1" />
+      <Segment_LCD_module v="LCD" />
+      <boolgroup name="Interrupt service/event" v="Enabled">
+        <Interrupt v="INT_LCD" />
+        <Interrupt_priority v="medium priority" />
+      </boolgroup>
+      <Stop_in_Wait_mode v="no" />
+      <Stop_in_Stop_mode v="no" />
+      <group name="Power supply">
+        <LCD_operation_voltage v="3V" />
+        <Power_mode_selection v="Charge Pump" />
+        <Voltage_supply_control v="Drive VLL3 internally from VDD" />
+        <boolgroup name="Charge pump" v="Enabled">
+          <Charge_pump_clock_adjust v="Slowest clock" />
+          <Charge_pump_clock v="1.365 kHz" />
+          <boolgroup name="Voltage regulator" v="Disabled" />
+        </boolgroup>
+        <Bias_voltage_VLL1 v="(VLL3 * 1/3) = 0.99V" />
+        <Bias_voltage_VLL2 v="(VLL3 * 2/3) = 1.98V" />
+        <Bias_voltage_VLL3 v="Connect internally to VDD(must be 3V)" />
+      </group>
+      <Blink_rate_bits_value v="0" />
+      <Blink_rate v="16 Hz" />
+      <LCD_frame_frequency v="64 Hz" />
+      <Base_clock v="1.024 kHz" />
+      <boolgroup name="Fault detect" v="Disabled" />
+      <list name="Backplane pins" v="4">
+        <group name="Backplane pin0">
+          <Backplane_pin v="LCD_P40/PTD0/SPI0_PCS0/TPM0_CH0" />
+        </group>
+        <group name="Backplane pin1">
+          <Backplane_pin v="LCD_P52/PTE4/SPI1_PCS0" />
+        </group>
+        <group name="Backplane pin2">
+          <Backplane_pin v="LCD_P19/PTB23" />
+        </group>
+        <group name="Backplane pin3">
+          <Backplane_pin v="LCD_P18/PTB22" />
+        </group>
+      </list>
+      <list name="Frontplane pins" v="8">
+        <group name="Frontplane pin0">
+          <Frontplane__pin v="LCD_P37/PTC17" />
+        </group>
+        <group name="Frontplane pin1">
+          <Frontplane__pin v="LCD_P17/PTB21" />
+        </group>
+        <group name="Frontplane pin2">
+          <Frontplane__pin v="LCD_P7/PTB7" />
+        </group>
+        <group name="Frontplane pin3">
+          <Frontplane__pin v="LCD_P8/PTB8/SPI1_PCS0/EXTRG_IN" />
+        </group>
+        <group name="Frontplane pin4">
+          <Frontplane__pin v="LCD_P53/PTE5" />
+        </group>
+        <group name="Frontplane pin5">
+          <Frontplane__pin v="LCD_P38/PTC18" />
+        </group>
+        <group name="Frontplane pin6">
+          <Frontplane__pin v="LCD_P10/PTB10/SPI1_PCS0" />
+        </group>
+        <group name="Frontplane pin7">
+          <Frontplane__pin v="LCD_P11/PTB11/SPI1_SCK" />
+        </group>
+      </list>
+      <group name="Initialization">
+        <Enable_in_init__code v="yes" />
+        <list name="Auto Initialization" v="1">
+          <Auto_initialization v="yes" />
+        </list>
+        <group name="Event mask">
+          <OnFaultDetectComplete v="Disabled" />
+        </group>
+      </group>
+      <list name="CPU clock/configuration selection (included)" v="1">
+        <group name="CPU clock/configuration selection">
+          <Clock_configuration_0 v="This component enabled" />
+          <Clock_configuration_1 v="This component disabled" />
+          <Clock_configuration_2 v="This component disabled" />
+          <Clock_configuration_3 v="This component disabled" />
+          <Clock_configuration_4 v="This component disabled" />
+          <Clock_configuration_5 v="This component disabled" />
+          <Clock_configuration_6 v="This component disabled" />
+          <Clock_configuration_7 v="This component disabled" />
+        </group>
+      </list>
+    </Properties>
+    <Methods>
+      <Init v="generate code" />
+      <Deinit v="don&amp;apos;t generate code" />
+      <Enable v="don&amp;apos;t generate code" />
+      <Disable v="don&amp;apos;t generate code" />
+      <SetEventMask v="don&amp;apos;t generate code" />
+      <GetEventMask v="don&amp;apos;t generate code" />
+      <GetEventStatus v="don&amp;apos;t generate code" />
+      <SetFrontplaneData v="generate code" />
+      <GetFrontplaneData v="don&amp;apos;t generate code" />
+      <SetAlternateFrontplaneData v="don&amp;apos;t generate code" />
+      <GetAlternateFrontplaneData v="don&amp;apos;t generate code" />
+      <SetBlinking v="don&amp;apos;t generate code" />
+      <SetBlank v="don&amp;apos;t generate code" />
+      <StartFaultDetectFrame v="don&amp;apos;t generate code" />
+      <GetFaultDetectCounter v="don&amp;apos;t generate code" />
+      <SetOperationMode v="don&amp;apos;t generate code" />
+      <GetDriverState v="don&amp;apos;t generate code" />
+    </Methods>
+    <Events>
+      <Event_module_name v="Events" />
+      <event name="OnFaultDetectComplete" v="don&amp;apos;t generate code" />
+    </Events>
+  </Bean>
 </PE_PROJECT_SETTINGS_DOCUMENTATION>
 
