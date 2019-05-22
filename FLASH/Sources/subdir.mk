@@ -10,49 +10,42 @@ C_SRCS_QUOTED += \
 "../Sources/common.c" \
 "../Sources/main.c" \
 "../Sources/sa_mtb.c" \
-"../Sources/wrappers.c" \
 
 C_SRCS += \
 ../Sources/Events.c \
 ../Sources/common.c \
 ../Sources/main.c \
 ../Sources/sa_mtb.c \
-../Sources/wrappers.c \
 
 OBJS += \
 ./Sources/Events.o \
 ./Sources/common.o \
 ./Sources/main.o \
 ./Sources/sa_mtb.o \
-./Sources/wrappers.o \
 
 C_DEPS += \
 ./Sources/Events.d \
 ./Sources/common.d \
 ./Sources/main.d \
 ./Sources/sa_mtb.d \
-./Sources/wrappers.d \
 
 OBJS_QUOTED += \
 "./Sources/Events.o" \
 "./Sources/common.o" \
 "./Sources/main.o" \
 "./Sources/sa_mtb.o" \
-"./Sources/wrappers.o" \
 
 C_DEPS_QUOTED += \
 "./Sources/Events.d" \
 "./Sources/common.d" \
 "./Sources/main.d" \
 "./Sources/sa_mtb.d" \
-"./Sources/wrappers.d" \
 
 OBJS_OS_FORMAT += \
 ./Sources/Events.o \
 ./Sources/common.o \
 ./Sources/main.o \
 ./Sources/sa_mtb.o \
-./Sources/wrappers.o \
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -88,6 +81,7 @@ Sources/sa_mtb.o: ../Sources/sa_mtb.c
 	@echo 'Finished building: $<'
 	@echo ' '
 
+<<<<<<< Updated upstream
 Sources/wrappers.o: ../Sources/wrappers.c
 	@echo 'Building file: $<'
 	@echo 'Executing target #5 $<'
@@ -96,4 +90,6 @@ Sources/wrappers.o: ../Sources/wrappers.c
 	@echo 'Finished building: $<'
 	@echo ' '
 
+=======
+>>>>>>> Stashed changes
 

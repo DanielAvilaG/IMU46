@@ -3,3 +3,8 @@
 *.d
 *.o
 *.project
+*.mk
+*.doxyfile
+*.IMU46.g_x
+*.IMU46.g_c
+/ProjectInfo.xml

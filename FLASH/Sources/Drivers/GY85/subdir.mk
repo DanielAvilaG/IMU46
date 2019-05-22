@@ -30,7 +30,11 @@ OBJS_OS_FORMAT += \
 # Each subdirectory must supply rules for building sources it contributes
 Sources/Drivers/GY85/GY85.o: ../Sources/Drivers/GY85/GY85.c
 	@echo 'Building file: $<'
+<<<<<<< Updated upstream
 	@echo 'Executing target #11 $<'
+=======
+	@echo 'Executing target #12 $<'
+>>>>>>> Stashed changes
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/Drivers/GY85/GY85.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/Drivers/GY85/GY85.o"
 	@echo 'Finished building: $<'
