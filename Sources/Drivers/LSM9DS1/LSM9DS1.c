@@ -7,11 +7,6 @@
 
 #include "LSM9DS1.h"
 
-
-
-
-
-
 void LSM9DS1_mag_read() 
 {
 	int rv = 1, count = 6;
@@ -19,7 +14,7 @@ void LSM9DS1_mag_read()
 
 	rv = I2C1_byteWrite(0x1E, 0x22, 0x01); // Set single mode
 	if (rv) for(;;) ; // replace with error handling 
-	rv = I2C1_burstRead(0x1E, 0x28, 6, data, &count);
+	rv = I2C1_burstRead(0x1E, 0x28, 6, (unsigned char*)data, &count);
 	if (rv) for(;;) ; // replace with error handling 
 
 	Raw_Data.mx = data[0];

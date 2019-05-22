@@ -45,9 +45,7 @@
     <SourceCodePaths>
       <Path>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Generated_Code\</Path>
       <Path>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Project_Settings\Startup_Code\</Path>
-      <Path>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Drivers\ADC\</Path>
       <Path>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Drivers\GY85\</Path>
-      <Path>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Drivers\HC\</Path>
       <Path>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Drivers\I2C\</Path>
       <Path>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Drivers\LCD\</Path>
       <Path>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Drivers\LED\</Path>
@@ -85,10 +83,7 @@
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Generated_Code\timers.c</PathName>
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Project_Settings\Startup_Code\__arm_end.c</PathName>
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Project_Settings\Startup_Code\__arm_start.c</PathName>
-      <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Drivers\ADC\ADC_I.c</PathName>
-      <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Drivers\ADC\ADC_P.c</PathName>
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Drivers\GY85\GY85.c</PathName>
-      <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Drivers\HC\HC.c</PathName>
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Drivers\I2C\I2C.c</PathName>
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Drivers\LCD\LCD.c</PathName>
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Drivers\LCD\s401.c</PathName>
@@ -97,8 +92,10 @@
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Drivers\LSM9DS1\LSM9DS1.c</PathName>
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Drivers\UART\UART.c</PathName>
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Events.c</PathName>
+      <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\common.c</PathName>
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\main.c</PathName>
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\sa_mtb.c</PathName>
+      <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\wrappers.c</PathName>
     </GeneratedCs>
     <GeneratedHs>
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Generated_Code\BitIoLdd1.h</PathName>
@@ -140,10 +137,7 @@
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Generated_Code\timers.h</PathName>
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Project_Headers\bme.h</PathName>
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Project_Settings\Startup_Code\runtime_configuration.h</PathName>
-      <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Drivers\ADC\ADC_I.h</PathName>
-      <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Drivers\ADC\ADC_P.h</PathName>
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Drivers\GY85\GY85.h</PathName>
-      <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Drivers\HC\HC.h</PathName>
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Drivers\I2C\I2C.h</PathName>
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Drivers\LCD\FRDM-s401.h</PathName>
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Drivers\LCD\LCD.h</PathName>
@@ -156,6 +150,8 @@
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Drivers\UART\UART.h</PathName>
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\Events.h</PathName>
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\MKL46Z4.h</PathName>
+      <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\common.h</PathName>
+      <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\wrappers.h</PathName>
       <PathName>D:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\iofiles\MKL46Z4.h</PathName>
       <PathName>D:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\ADC_PDD.h</PathName>
       <PathName>D:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\CMP_PDD.h</PathName>

@@ -9,6 +9,7 @@
 #define I2C_H_
 
 #include "../../MKL46Z4.h"
+#include "../../common.h"
 
 #define SLAVE_ADDR 0x68
 #define ERR_NONE 0

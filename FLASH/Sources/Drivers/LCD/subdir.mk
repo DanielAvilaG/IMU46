@@ -37,7 +37,7 @@ OBJS_OS_FORMAT += \
 # Each subdirectory must supply rules for building sources it contributes
 Sources/Drivers/LCD/LCD.o: ../Sources/Drivers/LCD/LCD.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #9 $<'
+	@echo 'Executing target #8 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/Drivers/LCD/LCD.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/Drivers/LCD/LCD.o"
 	@echo 'Finished building: $<'
@@ -45,7 +45,7 @@ Sources/Drivers/LCD/LCD.o: ../Sources/Drivers/LCD/LCD.c
 
 Sources/Drivers/LCD/s401.o: ../Sources/Drivers/LCD/s401.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #10 $<'
+	@echo 'Executing target #9 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/Drivers/LCD/s401.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/Drivers/LCD/s401.o"
 	@echo 'Finished building: $<'

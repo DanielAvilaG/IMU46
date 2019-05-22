@@ -30,7 +30,7 @@ OBJS_OS_FORMAT += \
 # Each subdirectory must supply rules for building sources it contributes
 Sources/Drivers/LSM9DS1/LSM9DS1.o: ../Sources/Drivers/LSM9DS1/LSM9DS1.c
 	@echo 'Building file: $<'
-	@echo 'Executing target #6 $<'
+	@echo 'Executing target #7 $<'
 	@echo 'Invoking: ARM Ltd Windows GCC C Compiler'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc" "$<" @"Sources/Drivers/LSM9DS1/LSM9DS1.args" -MMD -MP -MF"$(@:%.o=%.d)" -o"Sources/Drivers/LSM9DS1/LSM9DS1.o"
 	@echo 'Finished building: $<'

@@ -49,7 +49,7 @@
       <File Name="Generated_Code/PE_LDD.c" FileDate="2019-05-21, 18:35:11" FileAge="1558456511229" FileType="45637" CompNumb="2" />
       <File Name="Generated_Code/projdefs.h" FileDate="2019-05-16, 19:09:10" FileAge="1558026550000" FileType="45637" CompNumb="6" />
       <File Name="Generated_Code/portmacro.h" FileDate="2019-05-16, 19:09:10" FileAge="1558026550000" FileType="45637" CompNumb="6" />
-      <File Name="Documentation/IMU46_SIGNALS.txt" FileDate="2019-05-21, 19:34:01" FileAge="1558460041501" FileType="3072" />
+      <File Name="Documentation/IMU46_SIGNALS.txt" FileDate="2019-05-22, 17:07:49" FileAge="1558537669760" FileType="3072" />
       <File Name="Static_Code/PDD/COP_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
       <File Name="Static_Code/PDD/TPM_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
       <File Name="Generated_Code/list.h" FileDate="2019-05-16, 19:09:10" FileAge="1558026550000" FileType="45637" CompNumb="6" />
@@ -63,7 +63,7 @@
       <File Name="Sources/Events.h" FileDate="2019-05-21, 18:35:11" FileAge="1558456511317" FileType="131328" />
       <File Name="Sources/Events.c" FileDate="2019-05-16, 19:09:12" FileAge="1558026552000" FileType="131328" />
       <File Name="Static_Code/PDD/CMP_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
-      <File Name="Sources/main.c" FileDate="2019-05-21, 19:32:17" FileAge="1558459937392" FileType="128" />
+      <File Name="Sources/main.c" FileDate="2019-05-22, 17:02:56" FileAge="1558537376540" FileType="128" />
       <File Name="Generated_Code/heap_useNewlib.txt" FileDate="2019-05-16, 19:09:10" FileAge="1558026550000" FileType="45637" CompNumb="6" />
       <File Name="Generated_Code/readme_gdbBacktraceDebug.txt" FileDate="2019-05-16, 19:09:10" FileAge="1558026550000" FileType="45637" CompNumb="6" />
       <File Name="Static_Code/PDD/GPIO_PDD.h" FileDate="2014-02-20, 14:18:46" FileAge="1392902326000" FileType="262144" />
@@ -72,7 +72,7 @@
       <File Name="Generated_Code/heap_5.c" FileDate="2019-05-16, 19:09:10" FileAge="1558026550000" FileType="45637" CompNumb="6" />
       <File Name="Generated_Code/heap_useNewlib.c" FileDate="2019-05-16, 19:09:10" FileAge="1558026550000" FileType="45637" CompNumb="6" />
       <File Name="Documentation/doxygen/IMU46.txt" FileDate="2019-05-21, 18:35:11" FileAge="1558456511175" FileType="45637" CompNumb="2" />
-      <File Name="ProjectInfo.xml" FileDate="2019-05-21, 19:29:30" FileAge="1558459770195" FileType="45637" />
+      <File Name="ProjectInfo.xml" FileDate="2019-05-22, 17:07:52" FileAge="1558537672166" FileType="45637" />
       <File Name="Generated_Code/heap_4.c" FileDate="2019-05-16, 19:09:10" FileAge="1558026550000" FileType="45637" CompNumb="6" />
       <File Name="Documentation/doxygen/BitIoLdd1.txt" FileDate="2019-05-16, 20:18:24" FileAge="1558030704000" FileType="45637" CompNumb="16" />
       <File Name="Generated_Code/heap_3.c" FileDate="2019-05-16, 19:09:10" FileAge="1558026550000" FileType="45637" CompNumb="6" />
@@ -121,5 +121,5 @@
       <File Name="Generated_Code/portTicks.h" FileDate="2019-05-16, 19:09:10" FileAge="1558026550000" FileType="45637" CompNumb="6" />
     </GeneratedByPE>
   </GeneratedFilesList>
-  <CodeGenReference>16</CodeGenReference>
+  <CodeGenReference>24</CodeGenReference>
 </CodeGenerationInfo>

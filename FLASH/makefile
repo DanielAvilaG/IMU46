@@ -2,7 +2,7 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-#Progress monitor hint: 43
+#Progress monitor hint: 39
 first : all
 -include ../makefile.init
 
@@ -17,12 +17,9 @@ RM := "$(GNU_Make_Install_DirEnv)/rm" -rf
 -include Sources/subdir.mk
 -include Sources/Drivers/UART/subdir.mk
 -include Sources/Drivers/LSM9DS1/subdir.mk
--include Sources/Drivers/LED/subdir.mk
 -include Sources/Drivers/LCD/subdir.mk
 -include Sources/Drivers/I2C/subdir.mk
--include Sources/Drivers/HC/subdir.mk
 -include Sources/Drivers/GY85/subdir.mk
--include Sources/Drivers/ADC/subdir.mk
 -include Project_Settings/Startup_Code/subdir.mk
 -include Generated_Code/subdir.mk
 -include objects.mk
@@ -67,7 +64,7 @@ all: warning-messages explicit-dependencies IMU46.elf secondary-outputs
 # Tool invocations
 IMU46.elf: $(OBJS) $(USER_OBJS) ../Project_Settings/Linker_Files/ProcessorExpert.ld
 	@echo 'Building target: $@'
-	@echo 'Executing target #44 $@'
+	@echo 'Executing target #40 $@'
 	@echo 'Invoking: ARM Ltd Windows GCC C Linker'
 	"$(ARMSourceryDirEnv)/arm-none-eabi-gcc"  $(USER_OBJS_QUOTED) $(LIBS_QUOTED) @"IMU46.args" -o"IMU46.elf"
 	@echo 'Finished building target: $@'

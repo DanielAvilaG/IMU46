@@ -62,12 +62,9 @@ SUBDIRS := \
 Sources \
 Sources/Drivers/UART \
 Sources/Drivers/LSM9DS1 \
-Sources/Drivers/LED \
 Sources/Drivers/LCD \
 Sources/Drivers/I2C \
-Sources/Drivers/HC \
 Sources/Drivers/GY85 \
-Sources/Drivers/ADC \
 Project_Settings/Startup_Code \
 Generated_Code \
 

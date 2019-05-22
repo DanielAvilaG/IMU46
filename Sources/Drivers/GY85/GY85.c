@@ -8,12 +8,13 @@
 
 #include "GY85.h"
 
+
 void GY85_mag_read() {
 	int rv = 1, count = 6, ready = 0;
 	char buffer[50];
-	char data;
-	char data1[6];
-	char data2[6];
+	unsigned char data;
+	unsigned char data1[6];
+	unsigned char data2[6];
 	int16_t *xyz;
 
 	rv = I2C1_byteWrite(0x1E, 0x00, 0x70); // clear bit 7
@@ -37,7 +38,7 @@ void GY85_mag_read() {
 	data2[3]=data1[2];
 	data2[4]=data1[5];
 	data2[5]=data1[4];
-	xyz = data2;
+	xyz = (int16_t *)data2;
 	
 	Raw_Data.mx = xyz[0];
 	Raw_Data.my = xyz[1];
@@ -50,9 +51,9 @@ void GY85_mag_read() {
 void GY85_acc_read() {
 	int rv = 1, count = 6, ready = 0;
 	char buffer[50];
-	char data;
-	char data1[7];
-	char data2[7];
+	unsigned char data;
+	unsigned char data1[7];
+	//unsigned char data2[7];
 	int16_t *xyz;
 	while (!ready) {
 		//delayUs(1000);
@@ -73,13 +74,13 @@ void GY85_acc_read() {
 	rv = I2C1_burstRead(0x53, 0x32, 6, data1, &count);
 	if (rv) for(;;) ; // replace with error handling 
 	
-	data2[0]=data1[1];
+	/*data2[0]=data1[1];
 	data2[1]=data1[0];
 	data2[2]=data1[3];
 	data2[3]=data1[2];
 	data2[4]=data1[5];
-	data2[5]=data1[4];
-	xyz = data1;
+	data2[5]=data1[4];*/
+	xyz = (int16_t *)data1;
 	
 	Raw_Data.ax = xyz[0];
 	Raw_Data.ay = xyz[1];
@@ -98,7 +99,7 @@ void GY85_acc_init()
 	int rv;
 	rv = I2C1_byteWrite(0x53, 0x31, 0x80); // Self Test ON
 	if (rv) for(;;) ; // replace with error handling */
-	delayMs(100);
+	//delayMs(100);
 	
 	//ADXL();
 	
@@ -149,8 +150,9 @@ int GY85_test()
 {
 	char buffer[20];
 	UART0_send_string_ln("Start GY_85 test:");
-	unsigned char data, data1[13];
-	int count;
+	unsigned char data;
+	//unsigned char data1[13];
+	//int count;
 	int rv;
 	//I2C1_init();
 	//rv = I2C1_burstRead(0x68, 0, 1, data1, &count);
@@ -172,4 +174,3 @@ int GY85_test()
 	//UART0_send_string_ln(data);
 	return 0;
 }
-

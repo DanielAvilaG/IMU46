@@ -254,7 +254,7 @@
     </GenFiles>
     <SignalListFile>Documentation\IMU46_SIGNALS.txt</SignalListFile>
     <DestinationCompiler>GNUC</DestinationCompiler>
-    <ProjectModificationStamp>14</ProjectModificationStamp>
+    <ProjectModificationStamp>17</ProjectModificationStamp>
   </Options>
   <CpuID_2>
     <Generated>true</Generated>

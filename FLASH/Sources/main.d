@@ -60,6 +60,16 @@ Sources/main.o: ../Sources/main.c \
  C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LEDpin1.h \
  C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/BitIoLdd1.h \
  C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/SegLCD1.h \
+ ../Sources/common.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdio.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdio \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/eof.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/va_list.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/file_struc.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdio_api.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdarg.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdarg \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/arm/stdarg.ARM.h \
  D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/math.h \
  D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cmath \
  D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cfloat \
@@ -71,21 +81,13 @@ Sources/main.o: ../Sources/main.c \
  D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/math_config.h \
  D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/arm/math.ARM.h \
  D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cerrno \
- D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdio.h \
- D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdio \
- D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/eof.h \
- D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/va_list.h \
- D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/file_struc.h \
- D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdio_api.h \
- D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdarg.h \
- D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdarg \
- D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/arm/stdarg.ARM.h \
- ../Sources/wrappers.h ../Sources/Drivers/GY85/GY85.h \
- ../Sources/Drivers/GY85/../I2C/I2C.h \
- ../Sources/Drivers/GY85/../I2C/../../MKL46Z4.h ../Sources/MKL46Z4.h \
- ../Sources/Drivers/I2C/I2C.h ../Sources/Drivers/UART/UART.h \
- ../Sources/Drivers/UART/../../MKL46Z4.h ../Sources/Drivers/LCD/LCD.h \
- ../Sources/Drivers/LCD/LCDConfig.h ../Sources/Drivers/LCD/FRDM-s401.h
+ ../Sources/MKL46Z4.h ../Sources/Drivers/UART/UART.h \
+ ../Sources/Drivers/UART/../../MKL46Z4.h ../Sources/Drivers/I2C/I2C.h \
+ ../Sources/Drivers/I2C/../../MKL46Z4.h \
+ ../Sources/Drivers/I2C/../../common.h ../Sources/Drivers/GY85/GY85.h \
+ ../Sources/Drivers/GY85/../../common.h ../Sources/Drivers/LCD/LCD.h \
+ ../Sources/Drivers/LCD/LCDConfig.h ../Sources/Drivers/LCD/FRDM-s401.h \
+ ../Sources/wrappers.h
 
 D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/lib_ewl.prefix:
 
@@ -209,6 +211,26 @@ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/BitIoLdd1.h:
 
 C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/SegLCD1.h:
 
+../Sources/common.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdio.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdio:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/eof.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/va_list.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/file_struc.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdio_api.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdarg.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdarg:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/arm/stdarg.ARM.h:
+
 D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/math.h:
 
 D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cmath:
@@ -231,42 +253,26 @@ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/arm/math.ARM.h
 
 D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cerrno:
 
-D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdio.h:
-
-D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdio:
-
-D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/eof.h:
-
-D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/va_list.h:
-
-D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/file_struc.h:
-
-D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdio_api.h:
-
-D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdarg.h:
-
-D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdarg:
-
-D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/arm/stdarg.ARM.h:
-
-../Sources/wrappers.h:
-
-../Sources/Drivers/GY85/GY85.h:
-
-../Sources/Drivers/GY85/../I2C/I2C.h:
-
-../Sources/Drivers/GY85/../I2C/../../MKL46Z4.h:
-
 ../Sources/MKL46Z4.h:
-
-../Sources/Drivers/I2C/I2C.h:
 
 ../Sources/Drivers/UART/UART.h:
 
 ../Sources/Drivers/UART/../../MKL46Z4.h:
+
+../Sources/Drivers/I2C/I2C.h:
+
+../Sources/Drivers/I2C/../../MKL46Z4.h:
+
+../Sources/Drivers/I2C/../../common.h:
+
+../Sources/Drivers/GY85/GY85.h:
+
+../Sources/Drivers/GY85/../../common.h:
 
 ../Sources/Drivers/LCD/LCD.h:
 
 ../Sources/Drivers/LCD/LCDConfig.h:
 
 ../Sources/Drivers/LCD/FRDM-s401.h:
+
+../Sources/wrappers.h:
