@@ -12,17 +12,24 @@
 #include <stdio.h>
 #include <math.h>
 #include "MKL46Z4.h"
+#include "FRTOS1.h"
+#include "LED1.h"
 #include "Drivers/UART/UART.h"
 #include "Drivers/I2C/I2C.h"
-//#include "Drivers/LSM9DS1/LSM9DS1.h"
-#include "Drivers/GY85/GY85.h"
+#include "Drivers/LSM9DS1/LSM9DS1.h"
+//#include "Drivers/GY85/GY85.h"
 
 // http://bit.do/KL46z-lcd
 #include "Drivers/LCD/LCD.h"
 
-#define M_PI 3.141593
+#define M_PI 3.141593 
 
+volatile extern float pitch, roll, yaw;
 
+const volatile extern float kA; // +-2g 10 bits
+const volatile extern float kM; // +-4.7G 12 bits
+
+SemaphoreHandle_t example_mutex;
 
 /** BP - Peripheral register structure */
 typedef struct Raw {

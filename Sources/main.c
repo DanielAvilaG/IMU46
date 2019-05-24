@@ -49,59 +49,25 @@
 #include "wrappers.h"
 
 
-volatile float pitch = 0.0, roll = 0.0, yaw = 0.0;
 
-const volatile float kA = 1/256.00; // +-2g 10 bits
-const volatile float kM = 1/390.00; // +-4.7G 12 bits
 
 
 static portTASK_FUNCTION(IMU_get_values, pvParameters){
 	(void) pvParameters;
 	char buffer[4];
-	for(;;){
-		LED1_Neg();
-		
-		//LSM9DS1_mag_read();
-		//buffer[0]= Raw_Data.mx;
-		//buffer[5]='\0';
-		//sprintf(buffer,"-- MagX: %d -- MagY: %d -- MagZ: %d", Raw_Data.mx, Raw_Data.my, Raw_Data.mz);
-		//UART0_send_string_ln(Raw_Data.mx);
-
+	while (pdTRUE)
+	{
 		GY85_read_RTOS();
-		
-		//sprintf(buffer, "%04i", Raw_Data.mx);
-		//i = (i+1) % 10000;
-		//vfnLCD_Write_Msg((uint8 *)buffer);
-		// FRTOS1_vTaskDelay(100/portTICK_RATE_MS);
-		FRTOS1_vTaskDelay(pdMS_TO_TICKS(400));
 	}
 }
 
 
 static portTASK_FUNCTION(IMU_proccess_values, pvParameters){
 	(void) pvParameters;
-	char buffer[4];
-	for(;;){
-		Mag_Accel.accelX = Raw_Data.ax*kA;
-		Mag_Accel.accelY = Raw_Data.ay*kA;
-		Mag_Accel.accelZ = Raw_Data.az*kA;
-		
-		Mag_Accel.magX = Raw_Data.mx*kM;
-		Mag_Accel.magY = Raw_Data.my*kM;
-		Mag_Accel.magZ = Raw_Data.mz*kM;
-		
-		pitch = 180 * atan2(Mag_Accel.accelX, sqrt(Mag_Accel.accelY*Mag_Accel.accelY + Mag_Accel.accelZ*Mag_Accel.accelZ))/M_PI;
-		roll = 180 * atan2(Mag_Accel.accelY, sqrt(Mag_Accel.accelX*Mag_Accel.accelX + Mag_Accel.accelZ*Mag_Accel.accelZ))/M_PI;
-		double mag_x = Mag_Accel.magX*cos(pitch) + Mag_Accel.magY*sin(roll)*sin(pitch) + Mag_Accel.magZ*cos(roll)*sin(pitch);
-		double mag_y = Mag_Accel.magY * cos(roll) - Mag_Accel.magZ * sin(roll);
-		yaw = 180 * atan2(-mag_y,mag_x)/M_PI;
-		float angulo = 180 * atan2((int)Raw_Data.mx, (int)Raw_Data.my) / M_PI;
-		int p = round(pitch), r = round(roll), y = round(yaw), a = round(angulo)+180 % 360;
-		sprintf(buffer,"PITCH: %d -- ROLL: %d -- YAW: %d -- Angulo: %d", p, r, y, a);
-		UART0_send_string_ln(buffer);
-		sprintf(buffer, "%04i", 1234);
-		vfnLCD_Write_Msg((uint8 *)buffer);
-		FRTOS1_vTaskDelay(pdMS_TO_TICKS(600));
+
+	while (pdTRUE) 
+	{
+		proccess_RTOS();
 	}
 }
 
@@ -121,11 +87,14 @@ int main(void)
   /* For example: for(;;) { } */
 	UART0_init();
 	I2C1_init();
-	GY85_mag_init();
-	GY85_acc_init();
+	//GY85_mag_init();
+	//GY85_acc_init();
 	char buffer[4];
 	sprintf(buffer, "%04i", 1234);
 	vfnLCD_Write_Msg((uint8 *)buffer);
+	
+	/* Create mutex */
+	example_mutex = xSemaphoreCreateMutex();
 	//for(;;) 
 		//GY85_test();
 	//LSM9DS1_mag_read();

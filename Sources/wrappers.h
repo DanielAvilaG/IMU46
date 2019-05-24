@@ -8,8 +8,9 @@
 #ifndef WRAPPERS_H_
 #define WRAPPERS_H_
 
-#include "Drivers/GY85/GY85.h"
+#include "common.h"
 
 void GY85_read_RTOS(void);
+void proccess_RTOS(void);
 
 #endif /* WRAPPERS_H_ */
