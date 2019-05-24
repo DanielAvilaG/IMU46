@@ -10,7 +10,7 @@
 
 #include "common.h"
 
-void GY85_read_RTOS(void);
+void read_RTOS(void);
 void proccess_RTOS(void);
 
 #endif /* WRAPPERS_H_ */

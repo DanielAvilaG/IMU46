@@ -87,9 +87,10 @@ Sources/main.o: ../Sources/main.c \
  ../Sources/Drivers/I2C/../../common.h \
  ../Sources/Drivers/LSM9DS1/LSM9DS1.h \
  ../Sources/Drivers/LSM9DS1/../../MKL46Z4.h \
- ../Sources/Drivers/LSM9DS1/../../common.h ../Sources/Drivers/LCD/LCD.h \
- ../Sources/Drivers/LCD/LCDConfig.h ../Sources/Drivers/LCD/FRDM-s401.h \
- ../Sources/wrappers.h
+ ../Sources/Drivers/LSM9DS1/../../common.h \
+ ../Sources/Drivers/LSM9DS1/LSM9DS1_Registers.h \
+ ../Sources/Drivers/LCD/LCD.h ../Sources/Drivers/LCD/LCDConfig.h \
+ ../Sources/Drivers/LCD/FRDM-s401.h ../Sources/wrappers.h
 
 D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/lib_ewl.prefix:
 
@@ -272,6 +273,8 @@ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cerrno:
 ../Sources/Drivers/LSM9DS1/../../MKL46Z4.h:
 
 ../Sources/Drivers/LSM9DS1/../../common.h:
+
+../Sources/Drivers/LSM9DS1/LSM9DS1_Registers.h:
 
 ../Sources/Drivers/LCD/LCD.h:
 

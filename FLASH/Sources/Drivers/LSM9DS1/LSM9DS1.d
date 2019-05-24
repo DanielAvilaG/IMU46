@@ -81,7 +81,8 @@ Sources/Drivers/LSM9DS1/LSM9DS1.o: ../Sources/Drivers/LSM9DS1/LSM9DS1.c \
  ../Sources/Drivers/LSM9DS1/../../Drivers/LCD/LCD.h \
  C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/Cpu.h \
  ../Sources/Drivers/LSM9DS1/../../Drivers/LCD/LCDConfig.h \
- ../Sources/Drivers/LSM9DS1/../../Drivers/LCD/FRDM-s401.h
+ ../Sources/Drivers/LSM9DS1/../../Drivers/LCD/FRDM-s401.h \
+ ../Sources/Drivers/LSM9DS1/LSM9DS1_Registers.h
 
 D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/lib_ewl.prefix:
 
@@ -248,3 +249,5 @@ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/Cpu.h:
 ../Sources/Drivers/LSM9DS1/../../Drivers/LCD/LCDConfig.h:
 
 ../Sources/Drivers/LSM9DS1/../../Drivers/LCD/FRDM-s401.h:
+
+../Sources/Drivers/LSM9DS1/LSM9DS1_Registers.h:

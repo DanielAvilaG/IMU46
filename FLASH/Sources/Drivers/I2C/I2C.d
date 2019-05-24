@@ -77,6 +77,7 @@ Sources/Drivers/I2C/I2C.o: ../Sources/Drivers/I2C/I2C.c \
  ../Sources/Drivers/I2C/../../Drivers/LSM9DS1/LSM9DS1.h \
  ../Sources/Drivers/I2C/../../Drivers/LSM9DS1/../../MKL46Z4.h \
  ../Sources/Drivers/I2C/../../Drivers/LSM9DS1/../../common.h \
+ ../Sources/Drivers/I2C/../../Drivers/LSM9DS1/LSM9DS1_Registers.h \
  ../Sources/Drivers/I2C/../../Drivers/LCD/LCD.h \
  C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/Cpu.h \
  ../Sources/Drivers/I2C/../../Drivers/LCD/LCDConfig.h \
@@ -239,6 +240,8 @@ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/string_api.h:
 ../Sources/Drivers/I2C/../../Drivers/LSM9DS1/../../MKL46Z4.h:
 
 ../Sources/Drivers/I2C/../../Drivers/LSM9DS1/../../common.h:
+
+../Sources/Drivers/I2C/../../Drivers/LSM9DS1/LSM9DS1_Registers.h:
 
 ../Sources/Drivers/I2C/../../Drivers/LCD/LCD.h:
 

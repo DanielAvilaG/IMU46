@@ -8,6 +8,8 @@
 #ifndef COMMON_H_
 #define COMMON_H_
 
+//#define GY85
+#define LSM9DS1
 
 #include <stdio.h>
 #include <math.h>
@@ -16,8 +18,13 @@
 #include "LED1.h"
 #include "Drivers/UART/UART.h"
 #include "Drivers/I2C/I2C.h"
-#include "Drivers/LSM9DS1/LSM9DS1.h"
-//#include "Drivers/GY85/GY85.h"
+
+#ifdef GY85
+	#include "Drivers/GY85/GY85.h"
+#endif
+#ifdef LSM9DS1
+	#include "Drivers/LSM9DS1/LSM9DS1.h"
+#endif
 
 // http://bit.do/KL46z-lcd
 #include "Drivers/LCD/LCD.h"

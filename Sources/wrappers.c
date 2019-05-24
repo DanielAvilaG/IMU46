@@ -10,21 +10,31 @@
 
 volatile float pitch = 0.0, roll = 0.0, yaw = 0.0;
 
-const volatile float kA = 1/256.00; // +-2g 10 bits
-const volatile float kM = 1/390.00; // +-4.7G 12 bits
 
-void GY85_read_RTOS()
+#ifdef GY85
+	const volatile float kA = 1/256.00; // +-2g 10 bits
+	const volatile float kM = 1/390.00; // +-4.7G 12 bits
+#endif
+#ifdef LSM9DS1
+	const volatile float kA = 0.122; // +-4g 
+	const volatile float kM = 0.14; // +-4G 
+#endif
+
+void read_RTOS()
 {
 	if (xSemaphoreTake(example_mutex, portMAX_DELAY)) 
 	{
 		LED1_Neg();
 		//taskYIELD();
-		
-		//GY85_mag_read();
-		//GY85_acc_read();
-		
-		LSM9DS1_mag_read();
-		
+		#ifdef GY85
+			GY85_mag_read();
+			GY85_acc_read();
+		#endif
+		#ifdef LSM9DS1
+			LSM9DS1_mag_read();
+			LSM9DS1_acc_read();
+		#endif
+
 		xSemaphoreGive(example_mutex);
 		vTaskDelay(pdMS_TO_TICKS(400));
 	}
@@ -50,13 +60,13 @@ void proccess_RTOS()
 		double mag_x = Mag_Accel.magX*cos(pitch) + Mag_Accel.magY*sin(roll)*sin(pitch) + Mag_Accel.magZ*cos(roll)*sin(pitch);
 		double mag_y = Mag_Accel.magY * cos(roll) - Mag_Accel.magZ * sin(roll);
 		yaw = 180 * atan2(-mag_y,mag_x)/M_PI;
-		float angulo = 180 * atan2((int)Raw_Data.mx, (int)Raw_Data.my) / M_PI;
-		int p = round(pitch), r = round(roll), y = round(yaw), a = round(angulo)+180 % 360;
+		float angulo = 180 * atan2(Raw_Data.mx, Raw_Data.my) / M_PI;
+		int p = round(pitch), r = round(roll), y = round(yaw), a = round(angulo) ;
 		int a1 = a;
 		sprintf(buffer1, "%04i", a1);
 		vfnLCD_Write_Msg((uint8 *)buffer1);
 		sprintf(buffer,"PITCH: %d -- ROLL: %d -- YAW: %d -- Angulo: %d", p, r, y, a);
-		UART0_send_string_ln(buffer);
+		//UART0_send_string_ln(buffer);
 		xSemaphoreGive(example_mutex);
 		FRTOS1_vTaskDelay(pdMS_TO_TICKS(600));
 	}

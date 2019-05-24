@@ -113,7 +113,7 @@ Distributed as-is; no warranty is given.
 // LSM9DS1 BASE ADDRESS //
 //////////////////////////
 
-#define ADDR_A_G 0x6B
+#define ADDR_XG 0x6B
 #define ADDR_M 0x1E
 
 #endif

@@ -45,6 +45,8 @@
 
 /* User includes (#include below this line is not maintained by Processor Expert) */
 
+
+
 #include "common.h"
 #include "wrappers.h"
 
@@ -54,10 +56,9 @@
 
 static portTASK_FUNCTION(IMU_get_values, pvParameters){
 	(void) pvParameters;
-	char buffer[4];
 	while (pdTRUE)
 	{
-		GY85_read_RTOS();
+		read_RTOS();
 	}
 }
 
@@ -87,8 +88,14 @@ int main(void)
   /* For example: for(;;) { } */
 	UART0_init();
 	I2C1_init();
-	//GY85_mag_init();
-	//GY85_acc_init();
+	#ifdef GY85
+		GY85_mag_init();
+		GY85_acc_init();
+	#endif
+	#ifdef LSM9DS1
+		
+	#endif
+	
 	char buffer[4];
 	sprintf(buffer, "%04i", 1234);
 	vfnLCD_Write_Msg((uint8 *)buffer);
