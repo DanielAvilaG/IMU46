@@ -6,7 +6,7 @@
 **     Component   : FreeRTOS
 **     Version     : Component 01.562, Driver 01.00, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-05-24, 15:12, # CodeGen: 0
+**     Date/Time   : 2019-05-31, 16:51, # CodeGen: 19
 **     Abstract    :
 **          This component implements the FreeRTOS Realtime Operating System
 **     Settings    :
@@ -19,7 +19,7 @@
 **            Source Folders                               : Disabled
 **            Custom portBASE_TYPE                         : Disabled
 **          Classic CodeWarrior                            : no
-**          Disabled Interrupts in Startup                 : yes
+**          Disabled Interrupts in Startup                 : no
 **          configASSERT                                   : yes
 **          Application Task Tags                          : no
 **          Thread Local Storage Pointers                  : 0
@@ -1743,7 +1743,7 @@ bool FRTOS1_xSemaphoreTakeFromISR(xSemaphoreHandle xSemaphore, signed_portBASE_T
 */
 void FRTOS1_Init(void)
 {
-  portDISABLE_ALL_INTERRUPTS(); /* disable all interrupts, they get enabled in vStartScheduler() */
+  /* RTOS adapter is configured not to disable interrupts */ \
 #if configSYSTICK_USE_LOW_POWER_TIMER
   /* enable clocking for low power timer, otherwise vPortStopTickTimer() will crash.
     Additionally, Percepio trace needs access to the timer early on. */

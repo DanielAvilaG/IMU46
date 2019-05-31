@@ -144,6 +144,43 @@ void FRTOS1_vApplicationMallocFailedHook(void)
   for(;;) {}
 }
 
+/*
+** ===================================================================
+**     Event       :  LeftSW_Interrupt (module Events)
+**
+**     Component   :  EInt1 [ExtInt]
+**     Description :
+**         This event is called when an active signal edge/level has
+**         occurred.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+void LeftSW_Interrupt(void)
+{
+  /* Write your code here ... */
+	LED2_On();
+}
+
+/*
+** ===================================================================
+**     Event       :  RightSW_Interrupt (module Events)
+**
+**     Component   :  EInt2 [ExtInt]
+**     Description :
+**         This event is called when an active signal edge/level has
+**         occurred.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+void RightSW_Interrupt(void)
+{
+  /* Write your code here ... */
+	LED2_Off();
+	for(;;);
+}
+
 /* END Events */
 
 #ifdef __cplusplus

@@ -16,6 +16,7 @@
 #include "MKL46Z4.h"
 #include "FRTOS1.h"
 #include "LED1.h"
+#include "LED2.h"
 #include "Drivers/UART/UART.h"
 #include "Drivers/I2C/I2C.h"
 

@@ -31,6 +31,9 @@
 - \subpage BitIoLdd1
 - \subpage SegLCD1
 - \subpage SegLCD1
+- \subpage ExtIntLdd1
+- \subpage ExtIntLdd2
+- \subpage BitIoLdd2
 
 
 */

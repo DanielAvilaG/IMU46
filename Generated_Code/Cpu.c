@@ -7,13 +7,13 @@
 **     Version     : Component 01.002, Driver 01.04, CPU db: 3.00.000
 **     Datasheet   : KL46P121M48SF4RM, Rev.2, Dec 2012
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-05-24, 15:12, # CodeGen: 0
+**     Date/Time   : 2019-05-31, 17:02, # CodeGen: 22
 **     Abstract    :
 **
 **     Settings    :
 **
 **     Contents    :
-**         No public methods
+**         EnableInt - void Cpu_EnableInt(void);
 **
 **     Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -67,6 +67,13 @@
 #include "LEDpin1.h"
 #include "BitIoLdd1.h"
 #include "SegLCD1.h"
+#include "EInt1.h"
+#include "ExtIntLdd1.h"
+#include "EInt2.h"
+#include "ExtIntLdd2.h"
+#include "LED2.h"
+#include "LEDpin2.h"
+#include "BitIoLdd2.h"
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
@@ -82,6 +89,22 @@ extern "C" {
 volatile uint8_t SR_reg;               /* Current value of the FAULTMASK register */
 volatile uint8_t SR_lock = 0x00U;      /* Lock */
 
+
+/*
+** ===================================================================
+**     Method      :  Cpu_Cpu_ivINT_PORTC_PORTD (component MKL46Z256MC4)
+**
+**     Description :
+**         This ISR services the ivINT_PORTC_PORTD interrupt shared by 
+**         several components.
+**         This method is internal. It is used by Processor Expert only.
+** ===================================================================
+*/
+PE_ISR(Cpu_ivINT_PORTC_PORTD)
+{
+  ExtIntLdd1_Interrupt();              /* Call the service routine */
+  ExtIntLdd2_Interrupt();              /* Call the service routine */
+}
 
 /*
 ** ===================================================================
@@ -110,6 +133,20 @@ PE_ISR(Cpu_Interrupt)
 {
   /* This code can be changed using the CPU component property "Build Options / Unhandled int code" */
   PE_DEBUGHALT();
+}
+
+/*
+** ===================================================================
+**     Method      :  Cpu_EnableInt (component MKL46Z256MC4)
+*/
+/*!
+**     @brief
+**         Enables all maskable interrupts.
+*/
+/* ===================================================================*/
+void Cpu_EnableInt(void)
+{
+ __EI();
 }
 
 
@@ -246,6 +283,8 @@ void PE_low_level_init(void)
   /* SMC_PMPROT: ??=0,??=0,AVLP=0,??=0,ALLS=0,??=0,AVLLS=0,??=0 */
   SMC_PMPROT = 0x00U;                  /* Setup Power mode protection register */
   /* Common initialization of the CPU registers */
+  /* GPIOC_PDDR: PDD&=~0x1008 */
+  GPIOC_PDDR &= (uint32_t)~(uint32_t)(GPIO_PDDR_PDD(0x1008));
   /* PORTA_PCR20: ISF=0,MUX=7 */
   PORTA_PCR20 = (uint32_t)((PORTA_PCR20 & (uint32_t)~(uint32_t)(
                  PORT_PCR_ISF_MASK
@@ -264,6 +303,13 @@ void PE_low_level_init(void)
   LED1_Init(); /* ### LED "LED1" init code ... */
   /* ### SegLCD_LDD "SegLCD1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)SegLCD1_Init(NULL);
+  /* ### ExtInt_LDD "ExtIntLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)ExtIntLdd1_Init(NULL);
+  /* ### ExtInt_LDD "ExtIntLdd2" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)ExtIntLdd2_Init(NULL);
+  /* ### BitIO_LDD "BitIoLdd2" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)BitIoLdd2_Init(NULL);
+  LED2_Init(); /* ### LED "LED2" init code ... */
 }
   /* Flash configuration field */
   __attribute__ ((section (".cfmconfig"))) const uint8_t _cfm[0x10] = {

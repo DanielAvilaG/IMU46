@@ -5,7 +5,7 @@
 **     Processor   : MKL46Z256VMC4
 **     Version     : Component 01.002, Driver 01.04, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-05-24, 15:12, # CodeGen: 0
+**     Date/Time   : 2019-05-31, 16:01, # CodeGen: 5
 **     Abstract    :
 **
 **     Settings    :
@@ -61,6 +61,13 @@
   #include "LEDpin1.h"
   #include "BitIoLdd1.h"
   #include "SegLCD1.h"
+  #include "EInt1.h"
+  #include "ExtIntLdd1.h"
+  #include "EInt2.h"
+  #include "ExtIntLdd2.h"
+  #include "LED2.h"
+  #include "LEDpin2.h"
+  #include "BitIoLdd2.h"
   #include "Events.h"
 
 
@@ -127,7 +134,7 @@
     (tIsrFunc)&Cpu_Interrupt,          /* 0x2C  0x000000B0   -   ivINT_LPTimer                 unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x2D  0x000000B4   2   ivINT_LCD                     unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x2E  0x000000B8   -   ivINT_PORTA                   unused by PE */
-    (tIsrFunc)&Cpu_Interrupt           /* 0x2F  0x000000BC   -   ivINT_PORTC_PORTD             unused by PE */
+    (tIsrFunc)&Cpu_ivINT_PORTC_PORTD   /* 0x2F  0x000000BC   2   ivINT_PORTC_PORTD             used by PE */
     }
   };
   /*lint -restore Enable MISRA rule (11.4) checking. */

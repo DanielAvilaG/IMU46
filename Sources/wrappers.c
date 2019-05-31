@@ -25,6 +25,7 @@ void read_RTOS()
 	if (xSemaphoreTake(example_mutex, portMAX_DELAY)) 
 	{
 		LED1_Neg();
+		//LED2_Neg();
 		//taskYIELD();
 		#ifdef GY85
 			GY85_mag_read();

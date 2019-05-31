@@ -588,6 +588,24 @@ Module "SegLCD1"   (component SegLCD_LDD)
                 Init() the Deinit() must be called first.
    - SegLCD1_SetFrontplaneData -Set data to the LCD frontplane data registers. It sets/clears all used segments.
 
+Module "EInt1"     (component ExtInt)
+   - EInt1_GetVal -Returns the actual value of the input pin of the component.
+
+Module "EInt2"     (component ExtInt)
+   - EInt2_GetVal -Returns the actual value of the input pin of the component.
+
+Module "LED2"      (component LED)
+   - LED2_On -This turns the LED on.
+   - LED2_Off -This turns the LED off.
+   - LED2_Neg -This negates/toggles the LED
+   - LED2_Get -This returns logical 1 in case the LED is on, 0 otherwise.
+   - LED2_Put -Turns the LED on or off.
+   - LED2_SetRatio16 -Method to specify the duty cycle. If using a PWM pin, this means the duty cycle is set. For On/off pins, 
+                values smaller 0x7FFF means off, while values greater means on.
+   - LED2_Deinit -Deinitializes the driver
+   - LED2_Init -Performs the LED driver initialization.
+
 Module "Cpu"       (component MKL46Z256MC4)
+   - Cpu_EnableInt -Enables all maskable interrupts.
 
 ===================================================================================

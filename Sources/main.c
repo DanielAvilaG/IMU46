@@ -37,6 +37,13 @@
 #include "LEDpin1.h"
 #include "BitIoLdd1.h"
 #include "SegLCD1.h"
+#include "EInt1.h"
+#include "ExtIntLdd1.h"
+#include "EInt2.h"
+#include "ExtIntLdd2.h"
+#include "LED2.h"
+#include "LEDpin2.h"
+#include "BitIoLdd2.h"
 /* Including shared modules, which are used for whole project */
 #include "PE_Types.h"
 #include "PE_Error.h"
@@ -94,8 +101,8 @@ int main(void)
 
   /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
   PE_low_level_init();
+  Cpu_EnableInt();
   /*** End of Processor Expert internal initialization.                    ***/
-
   /* Write your code here */
   /* For example: for(;;) { } */
 	UART0_init();
@@ -121,7 +128,7 @@ int main(void)
 	//for(;;) HMC();
 	if( example_mutex != NULL && disp_queue != NULL) {
 		(void) FRTOS1_xTaskCreate(IMU_get_values, (portCHAR *)"IMU_get_values", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, NULL);
-		(void) FRTOS1_xTaskCreate( DISP_angle, ( signed char * ) "DISP_angle", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY+1, NULL );
+		(void) FRTOS1_xTaskCreate( DISP_angle, ( portCHAR * ) "DISP_angle", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY+1, NULL );
 		(void) FRTOS1_xTaskCreate(IMU_proccess_values, (portCHAR *)"IMU_proccess_values", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY+1, NULL);
 	}
 	

@@ -71,6 +71,13 @@
 #include "LEDpin1.h"
 #include "BitIoLdd1.h"
 #include "SegLCD1.h"
+#include "EInt1.h"
+#include "ExtIntLdd1.h"
+#include "EInt2.h"
+#include "ExtIntLdd2.h"
+#include "LED2.h"
+#include "LEDpin2.h"
+#include "BitIoLdd2.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -146,6 +153,34 @@ void FRTOS1_vApplicationMallocFailedHook(void);
 **     Description :
 **         If enabled, the RTOS will call this hook in case memory
 **         allocation failed.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+
+void LeftSW_Interrupt(void);
+/*
+** ===================================================================
+**     Event       :  LeftSW_Interrupt (module Events)
+**
+**     Component   :  EInt1 [ExtInt]
+**     Description :
+**         This event is called when an active signal edge/level has
+**         occurred.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+
+void RightSW_Interrupt(void);
+/*
+** ===================================================================
+**     Event       :  RightSW_Interrupt (module Events)
+**
+**     Component   :  EInt2 [ExtInt]
+**     Description :
+**         This event is called when an active signal edge/level has
+**         occurred.
 **     Parameters  : None
 **     Returns     : Nothing
 ** ===================================================================
