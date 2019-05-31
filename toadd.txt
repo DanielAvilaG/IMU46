@@ -1,0 +1,22 @@
+Cues:
+
+xQueue = xQueueCreate( mainQUEUE_LENGTH, sizeof( unsigned long));
+if( xQueue != NULL ) {
+  xTaskCreate( prvQueueReceiveTask, ( signed char * ) "Rx", configMINIMAL_STACK_SIZE, NULL, mainQUEUE_RECEIVE_TASK_PRIORITY, NULL );
+  xTaskCreate( prvQueueSendTask, ( signed char * ) "TX", configMINIMAL_STACK_SIZE, NULL, mainQUEUE_SEND_TASK_PRIORITY, NULL );
+}
+
+static void prvQueueSendTask( void *pvParameters ) {
+ 
+  xQueueSend( xQueue, &ulValueToSend, 0 );
+ 
+}
+static void prvQueueReceiveTask( void *pvParameters ) {
+  unsigned long ulReceivedValue;
+  for( ;; ) {
+    xQueueReceive( xQueue, &ulReceivedValue, portMAX_DELAY );
+    if( ulReceivedValue == 100UL ) {
+      prvToggleLED(); 
+    }
+  } 
+}
