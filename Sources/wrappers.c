@@ -64,7 +64,8 @@ void proccess_RTOS()
 		int p = round(pitch), r = round(roll), y = round(yaw), a = round(angulo) ;
 		int a1 = a;
 		sprintf(buffer1, "%04i", a1);
-		vfnLCD_Write_Msg((uint8 *)buffer1);
+		xQueueSend( disp_queue, buffer1, 0 );
+		
 		sprintf(buffer,"PITCH: %d -- ROLL: %d -- YAW: %d -- Angulo: %d", p, r, y, a);
 		//UART0_send_string_ln(buffer);
 		xSemaphoreGive(example_mutex);

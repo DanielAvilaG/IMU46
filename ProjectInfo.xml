@@ -147,33 +147,7 @@
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\MKL46Z4.h</PathName>
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\common.h</PathName>
       <PathName>C:\Users\Dani\Documents\UNI\PSE\PSE\IMU46\IMU46\Sources\wrappers.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\iofiles\MKL46Z4.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\ADC_PDD.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\CMP_PDD.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\COP_PDD.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\DAC_PDD.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\DMAMUX_PDD.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\DMA_PDD.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\FTFA_PDD.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\GPIO_PDD.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\I2C_PDD.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\LCD_PDD.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\LPTMR_PDD.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\MCM_PDD.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\PDD_Types.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\PIT_PDD.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\PORT_PDD.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\RTC_PDD.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\SAI_PDD.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\SIM_PDD.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\SPI_PDD.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\SysTick_PDD.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\TPM_PDD.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\UART0_PDD.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\UART_PDD.h</PathName>
-      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\USB_PDD.h</PathName>
       <PathName>D:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\iofiles\MKL46Z4.h</PathName>
-      <PathName>D:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\PDD_Types.h</PathName>
       <PathName>D:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\ADC_PDD.h</PathName>
       <PathName>D:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\CMP_PDD.h</PathName>
       <PathName>D:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\COP_PDD.h</PathName>
@@ -186,6 +160,7 @@
       <PathName>D:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\LCD_PDD.h</PathName>
       <PathName>D:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\LPTMR_PDD.h</PathName>
       <PathName>D:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\MCM_PDD.h</PathName>
+      <PathName>D:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\PDD_Types.h</PathName>
       <PathName>D:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\PIT_PDD.h</PathName>
       <PathName>D:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\PORT_PDD.h</PathName>
       <PathName>D:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\RTC_PDD.h</PathName>

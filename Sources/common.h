@@ -37,6 +37,7 @@ const volatile extern float kA; // +-2g 10 bits
 const volatile extern float kM; // +-4.7G 12 bits
 
 SemaphoreHandle_t example_mutex;
+QueueHandle_t disp_queue;
 
 /** BP - Peripheral register structure */
 typedef struct Raw {

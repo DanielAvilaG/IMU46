@@ -72,6 +72,18 @@ static portTASK_FUNCTION(IMU_proccess_values, pvParameters){
 	}
 }
 
+static portTASK_FUNCTION(DISP_angle, pvParameters){
+	(void) pvParameters;
+	char buffer[4];
+	while (pdTRUE) 
+	{
+		xQueueReceive( disp_queue, buffer, portMAX_DELAY );
+		vfnLCD_Write_Msg((uint8 *)buffer);
+	}
+}
+
+
+
 
 
 /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
@@ -102,12 +114,18 @@ int main(void)
 	
 	/* Create mutex */
 	example_mutex = xSemaphoreCreateMutex();
+	disp_queue = xQueueCreate( 4,4*sizeof(char));
 	//for(;;) 
 		//GY85_test();
 	//LSM9DS1_mag_read();
 	//for(;;) HMC();
-  (void) FRTOS1_xTaskCreate(IMU_get_values, (portCHAR *)"IMU_get_values", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, NULL);
-  (void) FRTOS1_xTaskCreate(IMU_proccess_values, (portCHAR *)"IMU_proccess_values", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, NULL);
+	if( example_mutex != NULL && disp_queue != NULL) {
+		(void) FRTOS1_xTaskCreate(IMU_get_values, (portCHAR *)"IMU_get_values", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, NULL);
+		(void) FRTOS1_xTaskCreate( DISP_angle, ( signed char * ) "DISP_angle", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY+1, NULL );
+		(void) FRTOS1_xTaskCreate(IMU_proccess_values, (portCHAR *)"IMU_proccess_values", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY+1, NULL);
+	}
+	
+ 
 
   /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
   /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
