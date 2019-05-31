@@ -200,9 +200,7 @@
       </group>
       <list name="Shared CPU interrupts/resets" v="1">
         <group name="CPU interrupts/resets">
-          <boolgroup name="NMI interrupt" v="Enabled">
-            <Interrupt v="INT_NMI" />
-          </boolgroup>
+          <boolgroup name="NMI interrupt" v="Disabled" />
           <boolgroup name="Hard Fault" v="Disabled" />
           <boolgroup name="Bus Fault" v="Disabled" />
           <boolgroup name="Usage Fault" v="Disabled" />
@@ -280,9 +278,7 @@
       <Event_module_name v="Events" />
       <list name="EvntsShrdGrp" v="1">
         <event name="OnReset" v="don&amp;apos;t generate code" />
-        <event name="OnNMIINT" v="generate code">
-          <Event_procedure_name v="Cpu_OnNMIINT" />
-        </event>
+        <event name="OnNMIINT" v="don&amp;apos;t generate code" />
         <event name="OnHardFault" v="don&amp;apos;t generate code" />
         <event name="OnBusFault" v="don&amp;apos;t generate code" />
         <event name="OnUsageFault" v="don&amp;apos;t generate code" />
@@ -1117,6 +1113,85 @@ PE_DEBUGHALT();
       <SetRatio16 v="generate code" />
       <ParseCommand v="don&amp;apos;t generate code" />
       <Deinit v="generate code" />
+      <Init v="generate code" />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
+  <Bean name="PTC" type="Init_GPIO">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="PTC" />
+      <Device v="PTC" />
+      <group name="Settings">
+        <boolgroup name="Pin 0" v="Do not initialize" />
+        <boolgroup name="Pin 1" v="Do not initialize" />
+        <boolgroup name="Pin 2" v="Do not initialize" />
+        <boolgroup name="Pin 3" v="Initialize">
+          <Pin_direction v="Input" />
+          <Output_value v="No initialization" />
+          <Pull_resistor v="Enabled" />
+          <Pull_selection v="Pull Up" />
+          <Slew_rate v="No initialization" />
+          <Interrupt_DMA_request v="Interrupt on rising" />
+        </boolgroup>
+        <boolgroup name="Pin 4" v="Do not initialize" />
+        <boolgroup name="Pin 5" v="Do not initialize" />
+        <boolgroup name="Pin 6" v="Do not initialize" />
+        <boolgroup name="Pin 7" v="Do not initialize" />
+        <boolgroup name="Pin 8" v="Do not initialize" />
+        <boolgroup name="Pin 9" v="Do not initialize" />
+        <boolgroup name="Pin 10" v="Do not initialize" />
+        <boolgroup name="Pin 11" v="Do not initialize" />
+        <boolgroup name="Pin 12" v="Initialize">
+          <Pin_direction v="Input" />
+          <Output_value v="No initialization" />
+          <Pull_resistor v="Enabled" />
+          <Pull_selection v="Pull Up" />
+          <Slew_rate v="No initialization" />
+          <Interrupt_DMA_request v="Interrupt on rising" />
+        </boolgroup>
+        <boolgroup name="Pin 13" v="Do not initialize" />
+        <boolgroup name="Pin 16" v="Do not initialize" />
+        <boolgroup name="Pin 17" v="Do not initialize" />
+        <boolgroup name="Pin 18" v="Do not initialize" />
+        <boolgroup name="Pin 20" v="Do not initialize" />
+        <boolgroup name="Pin 21" v="Do not initialize" />
+        <boolgroup name="Pin 22" v="Do not initialize" />
+        <boolgroup name="Pin 23" v="Do not initialize" />
+      </group>
+      <group name="Pin selection/routing">
+        <boolgroup name="Pin 0" v="Disabled" />
+        <boolgroup name="Pin 1" v="Disabled" />
+        <boolgroup name="Pin 2" v="Disabled" />
+        <boolgroup name="Pin 3" v="Disabled" />
+        <boolgroup name="Pin 4" v="Disabled" />
+        <boolgroup name="Pin 5" v="Disabled" />
+        <boolgroup name="Pin 6" v="Disabled" />
+        <boolgroup name="Pin 7" v="Disabled" />
+        <boolgroup name="Pin 8" v="Disabled" />
+        <boolgroup name="Pin 9" v="Disabled" />
+        <boolgroup name="Pin 10" v="Disabled" />
+        <boolgroup name="Pin 11" v="Disabled" />
+        <boolgroup name="Pin 12" v="Disabled" />
+        <boolgroup name="Pin 13" v="Disabled" />
+        <boolgroup name="Pin 16" v="Disabled" />
+        <boolgroup name="Pin 17" v="Disabled" />
+        <boolgroup name="Pin 18" v="Disabled" />
+        <boolgroup name="Pin 20" v="Disabled" />
+        <boolgroup name="Pin 21" v="Disabled" />
+        <boolgroup name="Pin 22" v="Disabled" />
+        <boolgroup name="Pin 23" v="Disabled" />
+      </group>
+      <group name="Interrupts">
+        <boolgroup name="Port interrupt" v="Disabled" />
+      </group>
+      <group name="Initialization">
+        <Call_Init_method v="yes" />
+      </group>
+    </Properties>
+    <Methods>
       <Init v="generate code" />
     </Methods>
     <Events>

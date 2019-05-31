@@ -266,7 +266,7 @@
         <SetClockConfiguration v="don&amp;apos;t generate code" />
         <GetClockConfiguration v="don&amp;apos;t generate code" />
         <SetOperationMode v="don&amp;apos;t generate code" />
-        <EnableInt v="don&amp;apos;t generate code" />
+        <EnableInt v="generate code" />
         <DisableInt v="don&amp;apos;t generate code" />
         <GetLLSWakeUpFlags v="don&amp;apos;t generate code" />
         <OpenBackDoor v="don&amp;apos;t generate code" />

@@ -7,7 +7,7 @@
 **     Version     : Component 01.002, Driver 01.04, CPU db: 3.00.000
 **     Datasheet   : KL46P121M48SF4RM, Rev.2, Dec 2012
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-05-31, 17:02, # CodeGen: 22
+**     Date/Time   : 2019-05-31, 19:25, # CodeGen: 23
 **     Abstract    :
 **
 **     Settings    :
@@ -81,7 +81,6 @@ extern "C" {
 #define Cpu_EnableInt_METHOD_ENABLED
 
 /* Events configuration constants - generated for all enabled component's events */
-#define Cpu_OnNMIINT_EVENT_ENABLED
 
 #define CPU_BUS_CLK_HZ                  20971520U /* Initial value of the bus clock frequency in Hz */
 #define CPU_CORE_CLK_HZ                 20971520U /* Initial value of the core/system clock frequency in Hz.  */
@@ -182,18 +181,6 @@ PE_ISR(Cpu_ivINT_PORTC_PORTD);
 ** ===================================================================
 */
 void PE_low_level_init(void);
-
-/* {FreeRTOS RTOS Adapter} ISR function prototype */
-PE_ISR(Cpu_INT_NMIInterrupt);
-/*
-** ===================================================================
-**     Method      :  Cpu_INT_NMIInterrupt (component MKL46Z256MC4)
-**
-**     Description :
-**         This ISR services the Non Maskable Interrupt interrupt.
-**         This method is internal. It is used by Processor Expert only.
-** ===================================================================
-*/
 
 PE_ISR(Cpu_Interrupt);
 /*

@@ -7,7 +7,7 @@
 **     Version     : Component 01.002, Driver 01.04, CPU db: 3.00.000
 **     Datasheet   : KL46P121M48SF4RM, Rev.2, Dec 2012
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-05-31, 17:02, # CodeGen: 22
+**     Date/Time   : 2019-05-31, 19:25, # CodeGen: 23
 **     Abstract    :
 **
 **     Settings    :
@@ -74,6 +74,7 @@
 #include "LED2.h"
 #include "LEDpin2.h"
 #include "BitIoLdd2.h"
+#include "PTC.h"
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
@@ -104,20 +105,6 @@ PE_ISR(Cpu_ivINT_PORTC_PORTD)
 {
   ExtIntLdd1_Interrupt();              /* Call the service routine */
   ExtIntLdd2_Interrupt();              /* Call the service routine */
-}
-
-/*
-** ===================================================================
-**     Method      :  Cpu_INT_NMIInterrupt (component MKL46Z256MC4)
-**
-**     Description :
-**         This ISR services the Non Maskable Interrupt interrupt.
-**         This method is internal. It is used by Processor Expert only.
-** ===================================================================
-*/
-PE_ISR(Cpu_INT_NMIInterrupt)
-{
-  Cpu_OnNMIINT();
 }
 
 /*
@@ -283,8 +270,29 @@ void PE_low_level_init(void)
   /* SMC_PMPROT: ??=0,??=0,AVLP=0,??=0,ALLS=0,??=0,AVLLS=0,??=0 */
   SMC_PMPROT = 0x00U;                  /* Setup Power mode protection register */
   /* Common initialization of the CPU registers */
+  /* PORTC_ISFR: ISF=0x1008 */
+  PORTC_ISFR = PORT_ISFR_ISF(0x1008);
+  /* Common initialization of the CPU registers */
   /* GPIOC_PDDR: PDD&=~0x1008 */
   GPIOC_PDDR &= (uint32_t)~(uint32_t)(GPIO_PDDR_PDD(0x1008));
+  /* PORTC_PCR3: ISF=0,IRQC=9,PE=1,PS=1 */
+  PORTC_PCR3 = (uint32_t)((PORTC_PCR3 & (uint32_t)~(uint32_t)(
+                PORT_PCR_ISF_MASK |
+                PORT_PCR_IRQC(0x06)
+               )) | (uint32_t)(
+                PORT_PCR_IRQC(0x09) |
+                PORT_PCR_PE_MASK |
+                PORT_PCR_PS_MASK
+               ));
+  /* PORTC_PCR12: ISF=0,IRQC=9,PE=1,PS=1 */
+  PORTC_PCR12 = (uint32_t)((PORTC_PCR12 & (uint32_t)~(uint32_t)(
+                 PORT_PCR_ISF_MASK |
+                 PORT_PCR_IRQC(0x06)
+                )) | (uint32_t)(
+                 PORT_PCR_IRQC(0x09) |
+                 PORT_PCR_PE_MASK |
+                 PORT_PCR_PS_MASK
+                ));
   /* PORTA_PCR20: ISF=0,MUX=7 */
   PORTA_PCR20 = (uint32_t)((PORTA_PCR20 & (uint32_t)~(uint32_t)(
                  PORT_PCR_ISF_MASK
@@ -310,6 +318,8 @@ void PE_low_level_init(void)
   /* ### BitIO_LDD "BitIoLdd2" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)BitIoLdd2_Init(NULL);
   LED2_Init(); /* ### LED "LED2" init code ... */
+  /* ### Init_GPIO "PTC" init code ... */
+  PTC_Init();
 }
   /* Flash configuration field */
   __attribute__ ((section (".cfmconfig"))) const uint8_t _cfm[0x10] = {

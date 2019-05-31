@@ -5,7 +5,7 @@
 **     Processor   : MKL46Z256VMC4
 **     Version     : Component 01.002, Driver 01.04, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-05-31, 16:01, # CodeGen: 5
+**     Date/Time   : 2019-05-31, 19:25, # CodeGen: 23
 **     Abstract    :
 **
 **     Settings    :
@@ -68,6 +68,7 @@
   #include "LED2.h"
   #include "LEDpin2.h"
   #include "BitIoLdd2.h"
+  #include "PTC.h"
   #include "Events.h"
 
 
@@ -89,7 +90,7 @@
     &__SP_INIT,                        /* 0x00  0x00000000   -   ivINT_Initial_Stack_Pointer   used by PE */
     {
     (tIsrFunc)&__thumb_startup,        /* 0x01  0x00000004   -   ivINT_Initial_Program_Counter used by PE */
-    (tIsrFunc)&Cpu_INT_NMIInterrupt,   /* 0x02  0x00000008   -2   ivINT_NMI                     used by PE */
+    (tIsrFunc)&Cpu_Interrupt,          /* 0x02  0x00000008   -2   ivINT_NMI                     unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x03  0x0000000C   -1   ivINT_Hard_Fault              unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x04  0x00000010   -   ivINT_Reserved4               unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x05  0x00000014   -   ivINT_Reserved5               unused by PE */
