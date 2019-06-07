@@ -36,6 +36,7 @@ extern "C" {
 
 
 /* User includes (#include below this line is not maintained by Processor Expert) */
+#include "common.h"
 
 /*
 ** ===================================================================
@@ -141,7 +142,10 @@ void FRTOS1_vApplicationMallocFailedHook(void)
 void LeftSW_Interrupt(void)
 {
   /* Write your code here ... */
-	LED2_On();
+	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+	xSemaphoreGiveFromISR(SW_start_sm, &xHigherPriorityTaskWoken);
+	//portYELD_FROM_ISR(xHigherPriorityTaskWoken);
+	taskYIELD();
 }
 
 /*
@@ -159,7 +163,11 @@ void LeftSW_Interrupt(void)
 void RightSW_Interrupt(void)
 {
   /* Write your code here ... */
-	LED2_Off();
+	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+	xSemaphoreGiveFromISR(SW_stop_sm, &xHigherPriorityTaskWoken);
+	//taskYELDFromISR(xHigherPriorityTaskWoken);
+	taskYIELD();
+	//xTaskResumeAllFromISR();
 }
 
 /* END Events */

@@ -589,9 +589,13 @@ Module "SegLCD1"   (component SegLCD_LDD)
    - SegLCD1_SetFrontplaneData -Set data to the LCD frontplane data registers. It sets/clears all used segments.
 
 Module "EInt1"     (component ExtInt)
+   - EInt1_Enable -Enable the component - the external events are accepted. This method is available only if HW module allows 
+                enable/disable of the interrupt.
    - EInt1_GetVal -Returns the actual value of the input pin of the component.
 
 Module "EInt2"     (component ExtInt)
+   - EInt2_Enable -Enable the component - the external events are accepted. This method is available only if HW module allows 
+                enable/disable of the interrupt.
    - EInt2_GetVal -Returns the actual value of the input pin of the component.
 
 Module "LED2"      (component LED)

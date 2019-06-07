@@ -432,7 +432,7 @@ PE_DEBUGHALT();
       <group name="Memory">
         <boolgroup name="Dynamic Allocation" v="Enabled">
           <Application_allocated_Heap v="no" />
-          <Heap_Size v="8192" />
+          <Heap_Size v="12288" />
           <Linker_Heap_Base_Symbol v="__HeapBase" />
           <Linker_Heap_Limit_Symbol v="__HeapLimit" />
           <Linker_Heap_Size_Symbol v="__heap_size" />
@@ -915,11 +915,11 @@ PE_DEBUGHALT();
         <Properties>
           <Component_name v="ExtIntLdd1" />
           <Pin v="LCD_P32/PTC12/TPM_CLKIN0" />
-          <Generate_interrupt_on v="rising edge" />
+          <Generate_interrupt_on v="falling edge" />
           <Interrupt v="INT_PORTC_PORTD" />
           <Interrupt_priority v="medium priority" />
           <group name="Initialization">
-            <Enabled_in_init__code v="yes" />
+            <Enabled_in_init__code v="no" />
             <list name="Auto Initialization" v="1">
               <Auto_initialization v="yes" />
             </list>
@@ -928,7 +928,7 @@ PE_DEBUGHALT();
         <Methods>
           <Init v="generate code" />
           <Deinit v="don&amp;apos;t generate code" />
-          <Enable v="don&amp;apos;t generate code" />
+          <Enable v="generate code" />
           <Disable v="don&amp;apos;t generate code" />
           <GetVal v="generate code" />
           <SetEdge v="don&amp;apos;t generate code" />
@@ -943,15 +943,15 @@ PE_DEBUGHALT();
           </event>
         </Events>
       </inhrbean>
-      <Generate_interrupt_on v="rising edge" />
+      <Generate_interrupt_on v="falling edge" />
       <Interrupt v="INT_PORTC_PORTD" />
       <Interrupt_priority v="medium priority" />
       <group name="Initialization">
-        <Enabled_in_init__code v="yes" />
+        <Enabled_in_init__code v="no" />
       </group>
     </Properties>
     <Methods>
-      <Enable v="don&amp;apos;t generate code" />
+      <Enable v="generate code" />
       <Disable v="don&amp;apos;t generate code" />
       <GetVal v="generate code" />
       <SetEdge v="don&amp;apos;t generate code" />
@@ -976,11 +976,11 @@ PE_DEBUGHALT();
         <Properties>
           <Component_name v="ExtIntLdd2" />
           <Pin v="LCD_P23/PTC3/LLWU_P7/UART1_RX/TPM0_CH2/CLKOUT/I2S0_TX_BCLK" />
-          <Generate_interrupt_on v="rising edge" />
+          <Generate_interrupt_on v="falling edge" />
           <Interrupt v="INT_PORTC_PORTD" />
           <Interrupt_priority v="medium priority" />
           <group name="Initialization">
-            <Enabled_in_init__code v="yes" />
+            <Enabled_in_init__code v="no" />
             <list name="Auto Initialization" v="1">
               <Auto_initialization v="yes" />
             </list>
@@ -989,7 +989,7 @@ PE_DEBUGHALT();
         <Methods>
           <Init v="generate code" />
           <Deinit v="don&amp;apos;t generate code" />
-          <Enable v="don&amp;apos;t generate code" />
+          <Enable v="generate code" />
           <Disable v="don&amp;apos;t generate code" />
           <GetVal v="generate code" />
           <SetEdge v="don&amp;apos;t generate code" />
@@ -1004,15 +1004,15 @@ PE_DEBUGHALT();
           </event>
         </Events>
       </inhrbean>
-      <Generate_interrupt_on v="rising edge" />
+      <Generate_interrupt_on v="falling edge" />
       <Interrupt v="INT_PORTC_PORTD" />
       <Interrupt_priority v="medium priority" />
       <group name="Initialization">
-        <Enabled_in_init__code v="yes" />
+        <Enabled_in_init__code v="no" />
       </group>
     </Properties>
     <Methods>
-      <Enable v="don&amp;apos;t generate code" />
+      <Enable v="generate code" />
       <Disable v="don&amp;apos;t generate code" />
       <GetVal v="generate code" />
       <SetEdge v="don&amp;apos;t generate code" />
@@ -1134,7 +1134,7 @@ PE_DEBUGHALT();
           <Pull_resistor v="Enabled" />
           <Pull_selection v="Pull Up" />
           <Slew_rate v="No initialization" />
-          <Interrupt_DMA_request v="Interrupt on rising" />
+          <Interrupt_DMA_request v="Interrupt on falling" />
         </boolgroup>
         <boolgroup name="Pin 4" v="Do not initialize" />
         <boolgroup name="Pin 5" v="Do not initialize" />
@@ -1150,7 +1150,7 @@ PE_DEBUGHALT();
           <Pull_resistor v="Enabled" />
           <Pull_selection v="Pull Up" />
           <Slew_rate v="No initialization" />
-          <Interrupt_DMA_request v="Interrupt on rising" />
+          <Interrupt_DMA_request v="Interrupt on falling" />
         </boolgroup>
         <boolgroup name="Pin 13" v="Do not initialize" />
         <boolgroup name="Pin 16" v="Do not initialize" />

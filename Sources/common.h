@@ -31,14 +31,18 @@
 #include "Drivers/LCD/LCD.h"
 
 #define M_PI 3.141593 
-
-volatile extern float pitch, roll, yaw;
+#define PERIOD_MS 500
 
 const volatile extern float kA; // +-2g 10 bits
 const volatile extern float kM; // +-4.7G 12 bits
 
-SemaphoreHandle_t example_mutex;
+volatile extern float pitch, roll, yaw, angleThen;
+//extern float angleThen;
+
+SemaphoreHandle_t IMU_mutex;
+SemaphoreHandle_t SW_start_sm, SW_stop_sm;
 QueueHandle_t disp_queue;
+TaskHandle_t get_handle;
 
 /** BP - Peripheral register structure */
 typedef struct Raw {

@@ -6,7 +6,7 @@
 **     Component   : Init_GPIO
 **     Version     : Component 01.006, Driver 01.06, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-05-31, 19:25, # CodeGen: 23
+**     Date/Time   : 2019-06-07, 13:08, # CodeGen: 26
 **     Abstract    :
 **          This file implements the GPIO (PTC) module initialization
 **          according to the Peripheral Initialization settings, and
@@ -24,7 +24,7 @@
 **              Pull resistor                              : Enabled
 **              Pull selection                             : Pull Up
 **              Slew rate                                  : No initialization
-**              Interrupt/DMA request                      : Interrupt on rising
+**              Interrupt/DMA request                      : Interrupt on falling
 **            Pin 4                                        : Do not initialize
 **            Pin 5                                        : Do not initialize
 **            Pin 6                                        : Do not initialize
@@ -39,7 +39,7 @@
 **              Pull resistor                              : Enabled
 **              Pull selection                             : Pull Up
 **              Slew rate                                  : No initialization
-**              Interrupt/DMA request                      : Interrupt on rising
+**              Interrupt/DMA request                      : Interrupt on falling
 **            Pin 13                                       : Do not initialize
 **            Pin 16                                       : Do not initialize
 **            Pin 17                                       : Do not initialize

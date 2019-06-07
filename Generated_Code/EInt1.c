@@ -6,7 +6,7 @@
 **     Component   : ExtInt
 **     Version     : Component 02.105, Driver 01.00, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-05-31, 15:56, # CodeGen: 3
+**     Date/Time   : 2019-06-07, 13:08, # CodeGen: 26
 **     Abstract    :
 **         This component "ExtInt" implements an external 
 **         interrupt, its control methods and interrupt/event 
@@ -29,15 +29,16 @@
 **         Bit number (in port)        : 12
 **         Bit mask of the port        : 0x1000
 **
-**         Signal edge/level           : rising
+**         Signal edge/level           : falling
 **         Priority                    : 2
 **         Pull option                 : off
-**         Initial state               : Enabled
+**         Initial state               : Disabled
 **
 **
 **         Port data register          : GPIOC_PDOR [0x400FF080]
 **         Port control register       : GPIOC_PDDR [0x400FF094]
 **     Contents    :
+**         Enable - void EInt1_Enable(void);
 **         GetVal - bool EInt1_GetVal(void);
 **
 **     Copyright : 1997 - 2014 Freescale Semiconductor, Inc. 
@@ -94,6 +95,23 @@
 #ifdef __cplusplus
 extern "C" {
 #endif 
+
+/*
+** ===================================================================
+**     Method      :  EInt1_Enable (component ExtInt)
+**     Description :
+**         Enable the component - the external events are accepted.
+**         This method is available only if HW module allows
+**         enable/disable of the interrupt.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+/*
+void EInt1_Enable(void)
+
+**  This method is implemented as a macro. See EInt1.h file.  **
+*/
 
 /*
 ** ===================================================================

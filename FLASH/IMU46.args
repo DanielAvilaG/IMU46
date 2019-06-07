@@ -51,10 +51,10 @@
 -g3
 -gdwarf-2
 -gstrict-dwarf
--T"C:/Users/PCO/workspace/IMU46/Project_Settings/Linker_Files/ProcessorExpert.ld"
+-T"C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Project_Settings/Linker_Files/ProcessorExpert.ld"
 -Xlinker
 --gc-sections
--L"C:/Freescale/CW MCU v11.1/MCU/ARM_GCC_Support/ewl/lib/armv6-m"
+-L"D:/Freescale/CW MCU v11.1/MCU/ARM_GCC_Support/ewl/lib/armv6-m"
 -Wl,-Map,IMU46.map
 -n
 -specs=ewl_c.specs
