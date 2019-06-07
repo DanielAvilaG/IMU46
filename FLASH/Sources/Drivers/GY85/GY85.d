@@ -67,6 +67,10 @@ Sources/Drivers/GY85/GY85.o: ../Sources/Drivers/GY85/GY85.c \
  C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/BitIoLdd1.h \
  D:/Freescale/CW\ MCU\ v11.1/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/GPIO_PDD.h \
  D:/Freescale/CW\ MCU\ v11.1/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/PDD_Types.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LED2.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LED2config.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LEDpin2.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/BitIoLdd2.h \
  ../Sources/Drivers/GY85/../../Drivers/UART/UART.h \
  ../Sources/Drivers/GY85/../../Drivers/UART/../../MKL46Z4.h \
  D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/string.h \
@@ -221,6 +225,14 @@ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/BitIoLdd1.h:
 D:/Freescale/CW\ MCU\ v11.1/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/GPIO_PDD.h:
 
 D:/Freescale/CW\ MCU\ v11.1/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/PDD_Types.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LED2.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LED2config.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LEDpin2.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/BitIoLdd2.h:
 
 ../Sources/Drivers/GY85/../../Drivers/UART/UART.h:
 

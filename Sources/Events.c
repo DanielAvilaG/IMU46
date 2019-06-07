@@ -36,24 +36,7 @@ extern "C" {
 
 
 /* User includes (#include below this line is not maintained by Processor Expert) */
-
-/*
-** ===================================================================
-**     Event       :  Cpu_OnNMIINT (module Events)
-**
-**     Component   :  Cpu [MKL46Z256MC4]
-*/
-/*!
-**     @brief
-**         This event is called when the Non maskable interrupt had
-**         occurred. This event is automatically enabled when the [NMI
-**         interrupt] property is set to 'Enabled'.
-*/
-/* ===================================================================*/
-void Cpu_OnNMIINT(void)
-{
-  /* Write your code here ... */
-}
+#include "common.h"
 
 /*
 ** ===================================================================
@@ -142,6 +125,49 @@ void FRTOS1_vApplicationMallocFailedHook(void)
   taskDISABLE_INTERRUPTS();
   /* Write your code here ... */
   for(;;) {}
+}
+
+/*
+** ===================================================================
+**     Event       :  LeftSW_Interrupt (module Events)
+**
+**     Component   :  EInt1 [ExtInt]
+**     Description :
+**         This event is called when an active signal edge/level has
+**         occurred.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+void LeftSW_Interrupt(void)
+{
+  /* Write your code here ... */
+	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+	xSemaphoreGiveFromISR(SW_start_sm, &xHigherPriorityTaskWoken);
+	//portYELD_FROM_ISR(xHigherPriorityTaskWoken);
+	taskYIELD();
+}
+
+/*
+** ===================================================================
+**     Event       :  RightSW_Interrupt (module Events)
+**
+**     Component   :  EInt2 [ExtInt]
+**     Description :
+**         This event is called when an active signal edge/level has
+**         occurred.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+void RightSW_Interrupt(void)
+{
+  /* Write your code here ... */
+	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+	xSemaphoreGiveFromISR(SW_stop_sm, &xHigherPriorityTaskWoken);
+	//taskYELDFromISR(xHigherPriorityTaskWoken);
+	taskYIELD();
+	//xTaskResumeAllFromISR();
 }
 
 /* END Events */

@@ -21,32 +21,35 @@ void LSM9DS1_mag_read()
 	Raw_Data.my = data[1];
 	Raw_Data.mz = data[2];
 	
+#ifdef DEBUG
 	char buffer[50];
 	sprintf(buffer,"ADDR_M rv: %d -- mx: %d -- my: %d -- mz: %d", rv, Raw_Data.mx, Raw_Data.my, Raw_Data.mz);
 	UART0_send_string_ln(buffer);
+#endif
 }
 
 void LSM9DS1_acc_read() {
-	int rv = 1, count = 6, ready = 0;
-	char buffer[50];
-	unsigned char data;
-	unsigned char data1[6];
+	int rv = 1, count = 6;
+	unsigned char data[6];
 	int16_t *xyz;
 	
 	rv = I2C1_byteWrite(ADDR_XG, CTRL_REG6_XL, 0x50); // Set ODR 50 Hz, 4g full scale
 	if (rv) for(;;) ; // replace with error handling 
 	
-	rv = I2C1_burstRead(ADDR_XG, OUT_X_L_XL, 6, data1, &count);
+	rv = I2C1_burstRead(ADDR_XG, OUT_X_L_XL, 6, data, &count);
 	if (rv) for(;;) ; // replace with error handling 
 
-	xyz = (int16_t *)data1;
+	xyz = (int16_t *)data;
 	
 	Raw_Data.ax = xyz[0];
 	Raw_Data.ay = xyz[1];
 	Raw_Data.az = xyz[2];
 	
+#ifdef DEBUG
+	char buffer[50];
 	sprintf(buffer,"ADDR_XG rv: %d -- ax: %d -- ay: %d -- az: %d", rv, Raw_Data.ax, Raw_Data.ay, Raw_Data.az);
-	//UART0_send_string_ln(buffer);
+	UART0_send_string_ln(buffer);
+#endif
 }
 
 int LSM9DS1_test()

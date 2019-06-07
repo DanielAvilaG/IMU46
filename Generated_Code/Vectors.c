@@ -5,7 +5,7 @@
 **     Processor   : MKL46Z256VMC4
 **     Version     : Component 01.002, Driver 01.04, CPU db: 3.00.000
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-05-24, 15:12, # CodeGen: 0
+**     Date/Time   : 2019-05-31, 19:25, # CodeGen: 23
 **     Abstract    :
 **
 **     Settings    :
@@ -61,6 +61,14 @@
   #include "LEDpin1.h"
   #include "BitIoLdd1.h"
   #include "SegLCD1.h"
+  #include "EInt1.h"
+  #include "ExtIntLdd1.h"
+  #include "EInt2.h"
+  #include "ExtIntLdd2.h"
+  #include "LED2.h"
+  #include "LEDpin2.h"
+  #include "BitIoLdd2.h"
+  #include "PTC.h"
   #include "Events.h"
 
 
@@ -82,7 +90,7 @@
     &__SP_INIT,                        /* 0x00  0x00000000   -   ivINT_Initial_Stack_Pointer   used by PE */
     {
     (tIsrFunc)&__thumb_startup,        /* 0x01  0x00000004   -   ivINT_Initial_Program_Counter used by PE */
-    (tIsrFunc)&Cpu_INT_NMIInterrupt,   /* 0x02  0x00000008   -2   ivINT_NMI                     used by PE */
+    (tIsrFunc)&Cpu_Interrupt,          /* 0x02  0x00000008   -2   ivINT_NMI                     unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x03  0x0000000C   -1   ivINT_Hard_Fault              unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x04  0x00000010   -   ivINT_Reserved4               unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x05  0x00000014   -   ivINT_Reserved5               unused by PE */
@@ -127,7 +135,7 @@
     (tIsrFunc)&Cpu_Interrupt,          /* 0x2C  0x000000B0   -   ivINT_LPTimer                 unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x2D  0x000000B4   2   ivINT_LCD                     unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x2E  0x000000B8   -   ivINT_PORTA                   unused by PE */
-    (tIsrFunc)&Cpu_Interrupt           /* 0x2F  0x000000BC   -   ivINT_PORTC_PORTD             unused by PE */
+    (tIsrFunc)&Cpu_ivINT_PORTC_PORTD   /* 0x2F  0x000000BC   2   ivINT_PORTC_PORTD             used by PE */
     }
   };
   /*lint -restore Enable MISRA rule (11.4) checking. */

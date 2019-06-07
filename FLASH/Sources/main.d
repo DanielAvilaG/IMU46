@@ -60,6 +60,20 @@ Sources/main.o: ../Sources/main.c \
  C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LEDpin1.h \
  C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/BitIoLdd1.h \
  C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/SegLCD1.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/EInt1.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/ExtIntLdd1.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/PORT_PDD.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/ExtIntLdd1.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/EInt2.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/ExtIntLdd2.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/ExtIntLdd2.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LED2.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LED2config.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LEDpin2.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/BitIoLdd2.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LEDpin2.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/BitIoLdd2.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/PTC.h \
  ../Sources/common.h \
  D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdio.h \
  D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdio \
@@ -213,6 +227,34 @@ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LEDpin1.h:
 C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/BitIoLdd1.h:
 
 C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/SegLCD1.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/EInt1.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/ExtIntLdd1.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/PORT_PDD.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/ExtIntLdd1.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/EInt2.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/ExtIntLdd2.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/ExtIntLdd2.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LED2.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LED2config.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LEDpin2.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/BitIoLdd2.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LEDpin2.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/BitIoLdd2.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/PTC.h:
 
 ../Sources/common.h:
 

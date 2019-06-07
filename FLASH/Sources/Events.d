@@ -59,7 +59,52 @@ Sources/Events.o: ../Sources/Events.c \
  D:/Freescale/CW\ MCU\ v11.1/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/PDD_Types.h \
  C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LEDpin1.h \
  C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/BitIoLdd1.h \
- C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/SegLCD1.h
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/SegLCD1.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/EInt1.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/ExtIntLdd1.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/PORT_PDD.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/ExtIntLdd1.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/EInt2.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/ExtIntLdd2.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/ExtIntLdd2.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LED2.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LED2config.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LEDpin2.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/BitIoLdd2.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LEDpin2.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/BitIoLdd2.h \
+ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/PTC.h \
+ ../Sources/common.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdio.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdio \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/eof.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/va_list.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/file_struc.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdio_api.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdarg.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdarg \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/arm/stdarg.ARM.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/math.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cmath \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cfloat \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewl_t.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/arm/float.ARM.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/math_api.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewl_misra_types.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/math_inlines.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/math_config.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/arm/math.ARM.h \
+ D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cerrno \
+ ../Sources/MKL46Z4.h ../Sources/Drivers/UART/UART.h \
+ ../Sources/Drivers/UART/../../MKL46Z4.h ../Sources/Drivers/I2C/I2C.h \
+ ../Sources/Drivers/I2C/../../MKL46Z4.h \
+ ../Sources/Drivers/I2C/../../common.h \
+ ../Sources/Drivers/LSM9DS1/LSM9DS1.h \
+ ../Sources/Drivers/LSM9DS1/../../MKL46Z4.h \
+ ../Sources/Drivers/LSM9DS1/../../common.h \
+ ../Sources/Drivers/LSM9DS1/LSM9DS1_Registers.h \
+ ../Sources/Drivers/LCD/LCD.h ../Sources/Drivers/LCD/LCDConfig.h \
+ ../Sources/Drivers/LCD/FRDM-s401.h
 
 D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/lib_ewl.prefix:
 
@@ -182,3 +227,99 @@ C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LEDpin1.h:
 C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/BitIoLdd1.h:
 
 C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/SegLCD1.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/EInt1.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/ExtIntLdd1.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ProcessorExpert/lib/Kinetis/pdd/inc/PORT_PDD.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/ExtIntLdd1.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/EInt2.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/ExtIntLdd2.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/ExtIntLdd2.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LED2.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LED2config.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LEDpin2.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/BitIoLdd2.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/LEDpin2.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/BitIoLdd2.h:
+
+C:/Users/Dani/Documents/UNI/PSE/PSE/IMU46/IMU46/Generated_Code/PTC.h:
+
+../Sources/common.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdio.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdio:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/eof.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/va_list.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/file_struc.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdio_api.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/stdarg.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cstdarg:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/arm/stdarg.ARM.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/math.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cmath:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cfloat:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewl_t.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/arm/float.ARM.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/math_api.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/ewl_misra_types.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/math_inlines.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/math_config.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/arm/math.ARM.h:
+
+D:/Freescale/CW\ MCU\ v11.1/MCU/ARM_GCC_Support/ewl/EWL_C/include/cerrno:
+
+../Sources/MKL46Z4.h:
+
+../Sources/Drivers/UART/UART.h:
+
+../Sources/Drivers/UART/../../MKL46Z4.h:
+
+../Sources/Drivers/I2C/I2C.h:
+
+../Sources/Drivers/I2C/../../MKL46Z4.h:
+
+../Sources/Drivers/I2C/../../common.h:
+
+../Sources/Drivers/LSM9DS1/LSM9DS1.h:
+
+../Sources/Drivers/LSM9DS1/../../MKL46Z4.h:
+
+../Sources/Drivers/LSM9DS1/../../common.h:
+
+../Sources/Drivers/LSM9DS1/LSM9DS1_Registers.h:
+
+../Sources/Drivers/LCD/LCD.h:
+
+../Sources/Drivers/LCD/LCDConfig.h:
+
+../Sources/Drivers/LCD/FRDM-s401.h:
