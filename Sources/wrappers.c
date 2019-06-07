@@ -24,7 +24,7 @@ void read_RTOS()
 {
 	if (xSemaphoreTake(IMU_mutex, portMAX_DELAY)) 
 	{
-		LED1_Neg();
+		
 		//LED2_Neg();
 		//taskYIELD();
 		#ifdef GY85
@@ -42,8 +42,7 @@ void read_RTOS()
 
 void proccess_RTOS()
 {
-	char buffer[40];
-	char buffer1[4];
+	char buffer1[4] = {'<'};
 
 	if (xSemaphoreTake(IMU_mutex, portMAX_DELAY)) 
 	{
@@ -60,14 +59,18 @@ void proccess_RTOS()
 		double mag_x = Mag_Accel.magX*cos(pitch) + Mag_Accel.magY*sin(roll)*sin(pitch) + Mag_Accel.magZ*cos(roll)*sin(pitch);
 		double mag_y = Mag_Accel.magY * cos(roll) - Mag_Accel.magZ * sin(roll);
 		yaw = 180 * atan2(-mag_y,mag_x)/M_PI;
-		float angle = (180 * atan2(Raw_Data.mx, Raw_Data.my) / M_PI) - angleThen;
-		int p = round(pitch), r = round(roll), y = round(yaw), a = round(angle) ;
-		int a1 = a;
-		sprintf(buffer1, "%04i", a1);
+		float angle = (180 * atan2(Raw_Data.mx, Raw_Data.my) / M_PI) + 180 - angleThen;
+		int a = round(angle);
+		int a1 = (a+360)%360;
+		sprintf(&buffer1[1], "%03i", a1);
 		xQueueSend( disp_queue, buffer1, 0 );
 		
+#ifdef DEBUG
+		char buffer[40];
+		int p = round(pitch), y = round(yaw), r = round(roll);
 		sprintf(buffer,"PITCH: %d -- ROLL: %d -- YAW: %d -- Angulo: %d", p, r, y, a);
-		//UART0_send_string_ln(buffer);
+		UART0_send_string_ln(buffer);
+#endif
 		xSemaphoreGive(IMU_mutex);
 	}
 }

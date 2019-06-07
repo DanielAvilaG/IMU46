@@ -65,6 +65,7 @@ static portTASK_FUNCTION(IMU_get_values, pvParameters){
 	{
 		read_RTOS();
 		vTaskDelay(pdMS_TO_TICKS(PERIOD_MS));
+		LED1_Neg();
 	}
 }
 
@@ -75,7 +76,8 @@ static portTASK_FUNCTION(IMU_proccess_values, pvParameters){
 	while (pdTRUE) 
 	{
 		proccess_RTOS();
-		FRTOS1_vTaskDelay(pdMS_TO_TICKS(PERIOD_MS + 20));
+		FRTOS1_vTaskDelay(pdMS_TO_TICKS(PERIOD_MS +20));
+		LED2_Neg();
 	}
 }
 
@@ -94,8 +96,8 @@ static portTASK_FUNCTION(SW_start_measure, pvParameters){
 	while (pdTRUE)
 	{
 		xSemaphoreTake(SW_start_sm, portMAX_DELAY);
-		read_RTOS();
-		angleThen = (180 * atan2(Raw_Data.mx, Raw_Data.my) / M_PI);
+		//read_RTOS();
+		angleThen = (180 * atan2(Raw_Data.mx, Raw_Data.my) / M_PI)+180;
 	}
 }
 
@@ -106,11 +108,15 @@ static portTASK_FUNCTION(SW_stop_measure, pvParameters){
 	while (pdTRUE)
 	{
 		xSemaphoreTake(SW_stop_sm, portMAX_DELAY);
-		vTaskSuspend(get_handle);
+		vTaskSuspend(IMU_get_handle);
+		vTaskSuspend(IMU_proces_handle);
 		LED2_On();
-		vTaskDelay(pdMS_TO_TICKS(2000));
-		vTaskResume(get_handle);
+		LED1_On();
+		vTaskDelay(pdMS_TO_TICKS(HOLD_MS));
+		vTaskResume(IMU_get_handle);
+		vTaskResume(IMU_proces_handle);
 		LED2_Off();
+		LED1_Off();
 	}
 }
 
@@ -157,9 +163,9 @@ int main(void)
 	if( IMU_mutex != NULL && disp_queue != NULL && SW_start_sm != NULL && SW_stop_sm != NULL) {
 		EInt1_Enable();
 		EInt2_Enable();
-		(void) FRTOS1_xTaskCreate(IMU_get_values, (portCHAR *)"IMU_get_values", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY+1, &get_handle);
+		(void) FRTOS1_xTaskCreate(IMU_get_values, (portCHAR *)"IMU_get_values", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY+1, &IMU_get_handle);
 		(void) FRTOS1_xTaskCreate( DISP_angle, ( portCHAR * ) "DISP_angle", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY+1, NULL );
-		(void) FRTOS1_xTaskCreate(IMU_proccess_values, (portCHAR *)"IMU_proccess_values", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY+1, NULL);
+		(void) FRTOS1_xTaskCreate(IMU_proccess_values, (portCHAR *)"IMU_proccess_values", configMINIMAL_STACK_SIZE*2, NULL, tskIDLE_PRIORITY+1, &IMU_proces_handle);
 		(void) FRTOS1_xTaskCreate( SW_start_measure, ( portCHAR * ) "SW_start_measure", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY+1, NULL );
 		(void) FRTOS1_xTaskCreate(SW_stop_measure, (portCHAR *)"SW_stop_measure", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY+1, NULL);
 	}

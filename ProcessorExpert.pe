@@ -3,7 +3,7 @@
   <Header>
     <Name>IMU46</Name>
     <SavedBy>Dani</SavedBy>
-    <ModificationStamp>43</ModificationStamp>
+    <ModificationStamp>44</ModificationStamp>
     <Date>2019-06-07</Date>
     <IDE>Eclipse IDE</IDE>
     <PEversion>1.9.2.RT6_b1446-0504</PEversion>
@@ -5172,7 +5172,7 @@
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
         <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
-        <Value>400</Value>
+        <Value>200</Value>
         <Base>DEC</Base>
       </ItemState>
       <ItemState>

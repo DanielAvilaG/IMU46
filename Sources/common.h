@@ -10,6 +10,7 @@
 
 //#define GY85
 #define LSM9DS1
+//#define DEBUG
 
 #include <stdio.h>
 #include <math.h>
@@ -32,6 +33,7 @@
 
 #define M_PI 3.141593 
 #define PERIOD_MS 500
+#define HOLD_MS 5000
 
 const volatile extern float kA; // +-2g 10 bits
 const volatile extern float kM; // +-4.7G 12 bits
@@ -42,7 +44,8 @@ volatile extern float pitch, roll, yaw, angleThen;
 SemaphoreHandle_t IMU_mutex;
 SemaphoreHandle_t SW_start_sm, SW_stop_sm;
 QueueHandle_t disp_queue;
-TaskHandle_t get_handle;
+TaskHandle_t IMU_get_handle;
+TaskHandle_t IMU_proces_handle;
 
 /** BP - Peripheral register structure */
 typedef struct Raw {
